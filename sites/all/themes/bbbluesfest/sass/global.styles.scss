@@ -43,14 +43,22 @@ html {
 }
 
 body {
+  background: $body;
   font-family: $sans-serif-small; // Set from _custom.scss font variables
   font-size: 87.5%;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 
 /* =============================================================================
  *   HTML Elements
  * ========================================================================== */
+
+h1,h2,h3 {
+  font-family: $maiden-orange;
+}
 
 h1 {}
 
@@ -538,6 +546,10 @@ a {
  *  - #secondary-menu (secondary/user menu)
  * You can target all of these with .nav or div[id$="menu-bar"]
  */
+
+#primary-menu-bar {
+  font-family: $maiden-orange;
+}
 
 .nav {
   clear: both;

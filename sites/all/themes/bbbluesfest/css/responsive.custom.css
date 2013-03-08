@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Maiden+Orange);
 /*
  * responsive.custom.css is for custom media queries that are not set via the
  * theme settings, such as cascading media queries.
@@ -35,6 +36,7 @@
    * "Float Region blocks" is an extension for floating blocks in regions, see
    * your themes appearance settings, under the Extensions tab.
    */
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wip\/bbbluesfest\.com\.pt\/app\/sites\/all\/themes\/bbbluesfest\/sass\/responsive\.custom\.scss}line{font-family:\0000349}}
   .region[class*="float-blocks"] .block {
     float: none;
     width: 100%;

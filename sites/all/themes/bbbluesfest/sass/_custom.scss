@@ -23,7 +23,8 @@
 // elements such as forms, tables, tabs etc.
 //
 
-$page:         #fff;    // to match the page background, default is white
+$page:         #000;    // to match the page background, default is white
+$body:         #a6d9f3;
 $border:       #ccc;    // all borders set in global.styles - tables, fieldset, primary links
 $highlight:    #c00;    // required mark, form error highlight, "new" label on comments
 $ultralight:   #f5f5f5; // table row even, primary link inactive tabs
@@ -60,6 +61,9 @@ $lucida:                      'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Gran
 $impact:                      Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif;
 $mono:                        Consolas, Monaco, 'Courier New', Courier, monospace, sans-serif;
 
+
+@import url(http://fonts.googleapis.com/css?family=Maiden+Orange);
+$maiden-orange: 'Maiden Orange', cursive;
 
 //
 // Gutters
