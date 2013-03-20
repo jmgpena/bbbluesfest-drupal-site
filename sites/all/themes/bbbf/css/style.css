@@ -232,6 +232,24 @@ h1, h2, h3, h4, h4, h5, h6 {
   #views_slideshow_cycle_teaser_section_featured-block .field-content img {
     max-width: 100%; }
 
+#block-views-novidades-block {
+  padding: 0 15px; }
+  #block-views-novidades-block h2.block-title {
+    border-bottom: 2px solid gray; }
+  #block-views-novidades-block table.views-view-grid td .field-name-field-image {
+    margin-right: 15px;
+    float: left; }
+  #block-views-novidades-block table.views-view-grid tr.row-1 {
+    border-bottom: 2px solid gray; }
+  #block-views-novidades-block table.views-view-grid td.col-1 {
+    border-right: 2px solid gray;
+    padding: 0 15px 15px 0; }
+  #block-views-novidades-block table.views-view-grid td.col-2 {
+    padding: 0 0 15px 15px; }
+  #block-views-novidades-block table.views-view-grid tr.row-2 td {
+    padding-top: 15px;
+    padding-bottom: 0; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
