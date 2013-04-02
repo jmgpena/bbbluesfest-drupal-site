@@ -1,7 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Maiden+Orange);
-@import url(http://fonts.googleapis.com/css?family=Maiden+Orange);
-@import url(http://fonts.googleapis.com/css?family=Maiden+Orange);
-@import url(http://fonts.googleapis.com/css?family=Maiden+Orange);
 /* Font styles. */
 body {
   margin: 0;
@@ -201,14 +197,30 @@ body:before {
       background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #eeeeee 12.90323%, #eeeeee 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #eeeeee 25.80645%, #eeeeee 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #eeeeee 38.70968%, #eeeeee 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #eeeeee 51.6129%, #eeeeee 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #eeeeee 64.51613%, #eeeeee 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #eeeeee 77.41935%, #eeeeee 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #eeeeee 90.32258%, #eeeeee 100.0%, rgba(0, 0, 0, 0) 100.0%);
       background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #eeeeee 12.90323%, #eeeeee 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #eeeeee 25.80645%, #eeeeee 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #eeeeee 38.70968%, #eeeeee 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #eeeeee 51.6129%, #eeeeee 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #eeeeee 64.51613%, #eeeeee 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #eeeeee 77.41935%, #eeeeee 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #eeeeee 90.32258%, #eeeeee 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
 
+@font-face {
+  font-family: "CubanoRegular";
+  src: url("fonts/cubano-regular-webfont.eot");
+  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/cubano-regular-webfont.woff") format("woff");
+  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
+  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg"); }
+
+@font-face {
+  font-family: "CubanoRegular";
+  src: url("fonts/cubano-regular-webfont.eot");
+  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/cubano-regular-webfont.woff") format("woff");
+  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
+  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg"); }
+
 body {
   background-color: black; }
 
 h1, h2, h3, h4, h4, h5, h6 {
-  font-family: "Maiden Orange", cursive; }
+  font-family: "CubanoRegular", sans-serif; }
 
 #page {
-  background-color: #a6d9f3; }
+  background-color: white; }
 
 #header a#logo {
   margin: 15px 0 15px 15px;
@@ -217,7 +229,7 @@ h1, h2, h3, h4, h4, h5, h6 {
   float: right; }
   #header #header-region #block-system-main-menu ul.menu {
     margin: 45px 0 0 0;
-    font-family: "Maiden Orange", cursive;
+    font-family: "CubanoRegular", sans-serif;
     font-size: 2rem;
     font-weight: bold;
     list-style-type: none; }
@@ -302,3 +314,19 @@ body:before {
       background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #eeeeee 12.90323%, #eeeeee 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #eeeeee 25.80645%, #eeeeee 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #eeeeee 38.70968%, #eeeeee 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #eeeeee 51.6129%, #eeeeee 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #eeeeee 64.51613%, #eeeeee 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #eeeeee 77.41935%, #eeeeee 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #eeeeee 90.32258%, #eeeeee 100.0%, rgba(0, 0, 0, 0) 100.0%);
       background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #eeeeee 12.90323%, #eeeeee 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #eeeeee 25.80645%, #eeeeee 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #eeeeee 38.70968%, #eeeeee 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #eeeeee 51.6129%, #eeeeee 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #eeeeee 64.51613%, #eeeeee 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #eeeeee 77.41935%, #eeeeee 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #eeeeee 90.32258%, #eeeeee 100.0%, rgba(0, 0, 0, 0) 100.0%);
       background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #eeeeee 12.90323%, #eeeeee 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #eeeeee 25.80645%, #eeeeee 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #eeeeee 38.70968%, #eeeeee 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #eeeeee 51.6129%, #eeeeee 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #eeeeee 64.51613%, #eeeeee 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #eeeeee 77.41935%, #eeeeee 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #eeeeee 90.32258%, #eeeeee 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
+
+@font-face {
+  font-family: "CubanoRegular";
+  src: url("fonts/cubano-regular-webfont.eot");
+  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/cubano-regular-webfont.woff") format("woff");
+  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
+  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg"); }
+
+@font-face {
+  font-family: "CubanoRegular";
+  src: url("fonts/cubano-regular-webfont.eot");
+  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/cubano-regular-webfont.woff") format("woff");
+  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
+  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg"); }
