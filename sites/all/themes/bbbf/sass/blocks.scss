@@ -89,6 +89,7 @@
       float: left;
       margin: 0 15px;
       a {
+        color: black;
         text-decoration: none;
       }
     }
@@ -132,4 +133,12 @@
     width: 100%;
     max-width: 100%;
   }
+}
+
+#block-views-fotos-block {
+  width: 336px;
+  padding: 0 15px;
+  h2 { font: 36px/38px $title-font; }
+  //img { float: left; }
+  width: 400px;
 }

@@ -96,7 +96,15 @@ body {
 
 #slideshow {
   background-color: black;
-  height: 442px;
+  height: 440px;
+}
+
+#triptic {
+  background-color: $light-blue;
+  .inner_triptic {
+    width: 980px;
+    margin: 0 auto;
+  }
 }
 
 /*
@@ -113,6 +121,8 @@ body {
  */
 
 #content {
+  width: 980px;
+  margin: 0 auto;
 }
 
 .region-highlighted {

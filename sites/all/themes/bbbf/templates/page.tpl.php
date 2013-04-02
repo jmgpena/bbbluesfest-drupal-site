@@ -123,6 +123,14 @@
     </div>
   <?php endif; ?>
 
+  <?php if ($page['triptic']) :?>
+    <div id="triptic">
+    <div class="inner_triptic">
+    <?php print render($page['triptic']); ?>
+    </div>
+    </div>
+  <?php endif; ?>
+
   <div id="main">
 
     <div id="content" class="column" role="main">

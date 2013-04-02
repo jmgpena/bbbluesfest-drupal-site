@@ -98,6 +98,7 @@ stylesheets[all][] = css/print.css
 regions[topbar]         = Top bar
 regions[header]         = Header
 regions[slideshow]      = Slideshow
+regions[triptic]        = Triptic
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
