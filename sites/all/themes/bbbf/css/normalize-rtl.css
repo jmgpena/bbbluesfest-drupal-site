@@ -1,0 +1,45 @@
+/* normalize-rtl.css - RTL language extension of normalize.scss. */
+@font-face {
+  font-family: 'CubanoRegular';
+  src: url("fonts/cubano-regular-webfont.eot");
+  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/cubano-regular-webfont.woff") format("woff");
+  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
+  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 14, ../sass/normalize-rtl.scss */
+dd {
+  margin: 0 30px 0 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+/* line 25, ../sass/normalize-rtl.scss */
+menu,
+ol,
+ul,
+.item-list ul {
+  padding: 0 30px 0 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* line 48, ../sass/normalize-rtl.scss */
+th {
+  text-align: right;
+}

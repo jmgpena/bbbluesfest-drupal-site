@@ -1,284 +1,226 @@
 <?php
-
 /**
- * Here we override the default HTML output of drupal.
- * refer to http://drupal.org/node/550722
+ * @file
+ * Contains the theme's functions to manipulate Drupal's default markup.
+ *
+ * A QUICK OVERVIEW OF DRUPAL THEMING
+ *
+ *   The default HTML for all of Drupal's markup is specified by its modules.
+ *   For example, the comment.module provides the default HTML markup and CSS
+ *   styling that is wrapped around each comment. Fortunately, each piece of
+ *   markup can optionally be overridden by the theme.
+ *
+ *   Drupal deals with each chunk of content using a "theme hook". The raw
+ *   content is placed in PHP variables and passed through the theme hook, which
+ *   can either be a template file (which you should already be familiary with)
+ *   or a theme function. For example, the "comment" theme hook is implemented
+ *   with a comment.tpl.php template file, but the "breadcrumb" theme hooks is
+ *   implemented with a theme_breadcrumb() theme function. Regardless if the
+ *   theme hook uses a template file or theme function, the template or function
+ *   does the same kind of work; it takes the PHP variables passed to it and
+ *   wraps the raw content with the desired HTML markup.
+ *
+ *   Most theme hooks are implemented with template files. Theme hooks that use
+ *   theme functions do so for performance reasons - theme_field() is faster
+ *   than a field.tpl.php - or for legacy reasons - theme_breadcrumb() has "been
+ *   that way forever."
+ *
+ *   The variables used by theme functions or template files come from a handful
+ *   of sources:
+ *   - the contents of other theme hooks that have already been rendered into
+ *     HTML. For example, the HTML from theme_breadcrumb() is put into the
+ *     $breadcrumb variable of the page.tpl.php template file.
+ *   - raw data provided directly by a module (often pulled from a database)
+ *   - a "render element" provided directly by a module. A render element is a
+ *     nested PHP array which contains both content and meta data with hints on
+ *     how the content should be rendered. If a variable in a template file is a
+ *     render element, it needs to be rendered with the render() function and
+ *     then printed using:
+ *       <?php print render($variable); ?>
+ *
+ * ABOUT THE TEMPLATE.PHP FILE
+ *
+ *   The template.php file is one of the most useful files when creating or
+ *   modifying Drupal themes. With this file you can do three things:
+ *   - Modify any theme hooks variables or add your own variables, using
+ *     preprocess or process functions.
+ *   - Override any theme function. That is, replace a module's default theme
+ *     function with one you write.
+ *   - Call hook_*_alter() functions which allow you to alter various parts of
+ *     Drupal's internals, including the render elements in forms. The most
+ *     useful of which include hook_form_alter(), hook_form_FORM_ID_alter(),
+ *     and hook_page_alter(). See api.drupal.org for more information about
+ *     _alter functions.
+ *
+ * OVERRIDING THEME FUNCTIONS
+ *
+ *   If a theme hook uses a theme function, Drupal will use the default theme
+ *   function unless your theme overrides it. To override a theme function, you
+ *   have to first find the theme function that generates the output. (The
+ *   api.drupal.org website is a good place to find which file contains which
+ *   function.) Then you can copy the original function in its entirety and
+ *   paste it in this template.php file, changing the prefix from theme_ to
+ *   bbbf_. For example:
+ *
+ *     original, found in modules/field/field.module: theme_field()
+ *     theme override, found in template.php: bbbf_field()
+ *
+ *   where bbbf is the name of your sub-theme. For example, the
+ *   zen_classic theme would define a zen_classic_field() function.
+ *
+ *   Note that base themes can also override theme functions. And those
+ *   overrides will be used by sub-themes unless the sub-theme chooses to
+ *   override again.
+ *
+ *   Zen core only overrides one theme function. If you wish to override it, you
+ *   should first look at how Zen core implements this function:
+ *     theme_breadcrumbs()      in zen/template.php
+ *
+ *   For more information, please visit the Theme Developer's Guide on
+ *   Drupal.org: http://drupal.org/node/173880
+ *
+ * CREATE OR MODIFY VARIABLES FOR YOUR THEME
+ *
+ *   Each tpl.php template file has several variables which hold various pieces
+ *   of content. You can modify those variables (or add new ones) before they
+ *   are used in the template files by using preprocess functions.
+ *
+ *   This makes THEME_preprocess_HOOK() functions the most powerful functions
+ *   available to themers.
+ *
+ *   It works by having one preprocess function for each template file or its
+ *   derivatives (called theme hook suggestions). For example:
+ *     THEME_preprocess_page    alters the variables for page.tpl.php
+ *     THEME_preprocess_node    alters the variables for node.tpl.php or
+ *                              for node--forum.tpl.php
+ *     THEME_preprocess_comment alters the variables for comment.tpl.php
+ *     THEME_preprocess_block   alters the variables for block.tpl.php
+ *
+ *   For more information on preprocess functions and theme hook suggestions,
+ *   please visit the Theme Developer's Guide on Drupal.org:
+ *   http://drupal.org/node/223440 and http://drupal.org/node/1089656
  */
 
-// Auto-rebuild the theme registry during theme development.
-if (theme_get_setting('clear_registry')) {
-  // Rebuild .info data.
-  system_rebuild_theme_data();
-  // Rebuild theme registry.
-  drupal_theme_rebuild();
-}
-
-// Add Zen Tabs styles
-if (theme_get_setting('bbbf_tabs')) {
-  drupal_add_css( drupal_get_path('theme', 'bbbf') .'/css/tabs.css');
-}
-
-function bbbf_preprocess_html(&$vars) {
-  global $user;
-
-  //Add role name classes (to allow css based show for admin/hidden from user)
-  foreach ($user->roles as $role){
-    $vars['classes_array'][] = 'role-' . bbbf_id_safe($role);
-  }
-
-  if (!$vars['is_front']) {
-    // Add unique classes for each page and website section
-    $path = drupal_get_path_alias($_GET['q']);
-    list($section, ) = explode('/', $path, 2);
-    $vars['classes_array'][] = 'with-subnav';
-    $vars['classes_array'][] = bbbf_id_safe('page-'. $path);
-    $vars['classes_array'][] = bbbf_id_safe('section-'. $section);
-
-    if (arg(0) == 'node') {
-      if (arg(1) == 'add') {
-        if ($section == 'node') {
-          // Remove 'section-node'
-          array_pop( $vars['classes_array'] );
-        }
-        // Add 'section-node-add'
-        $vars['classes_array'][] = 'section-node-add';
-      }
-      elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-        if ($section == 'node') {
-          // Remove 'section-node'
-          array_pop( $vars['classes_array']);
-        }
-        // Add 'section-node-edit' or 'section-node-delete'
-        $vars['classes_array'][] = 'section-node-'. arg(2); 
-      }
-    }
-  } 
-  //for normal un-themed edit pages
-  if ((arg(0) == 'node') && (arg(2) == 'edit')) {
-    $vars['template_files'][] =  'page';
-  }
-
-  // Add IE classes.
-  if (theme_get_setting('bbbf_ie_enabled')) {
-    $bbbf_ie_enabled_versions = theme_get_setting('bbbf_ie_enabled_versions');
-    if (in_array('ie8', $bbbf_ie_enabled_versions, TRUE)) {
-      drupal_add_css(path_to_theme() . '/css/ie8.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'preprocess' => FALSE));
-      drupal_add_js(path_to_theme() . '/js/selectivizr-min.js');
-    }
-    if (in_array('ie9', $bbbf_ie_enabled_versions, TRUE)) {
-      drupal_add_css(path_to_theme() . '/css/ie9.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
-    }
-    if (in_array('ie10', $bbbf_ie_enabled_versions, TRUE)) {
-      drupal_add_css(path_to_theme() . '/css/ie10.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 10', '!IE' => FALSE), 'preprocess' => FALSE));
-    }
-  }
-
-}
-
-function bbbf_preprocess_page(&$vars, $hook) {
-  if (isset($vars['node_title'])) {
-    $vars['title'] = $vars['node_title'];
-  }
-  // Adding classes whether #navigation is here or not
-  if (!empty($vars['main_menu']) or !empty($vars['sub_menu'])) {
-    $vars['classes_array'][] = 'with-navigation';
-  }
-  if (!empty($vars['secondary_menu'])) {
-    $vars['classes_array'][] = 'with-subnav';
-  }
-
-  // Add first/last classes to node listings about to be rendered.
-  if (isset($vars['page']['content']['system_main']['nodes'])) {
-    // All nids about to be loaded (without the #sorted attribute).
-    $nids = element_children($vars['page']['content']['system_main']['nodes']);
-    // Only add first/last classes if there is more than 1 node being rendered.
-    if (count($nids) > 1) {
-      $first_nid = reset($nids);
-      $last_nid = end($nids);
-      $first_node = $vars['page']['content']['system_main']['nodes'][$first_nid]['#node'];
-      $first_node->classes_array = array('first');
-      $last_node = $vars['page']['content']['system_main']['nodes'][$last_nid]['#node'];
-      $last_node->classes_array = array('last');
-    }
-  }
-
-  // Allow page override template suggestions based on node content type.
-  if (isset($vars['node']->type) && isset($vars['node']->nid)) {
-    $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
-    $vars['theme_hook_suggestions'][] = "page__node__" . $vars['node']->nid;
-  }
-}
-
-function bbbf_preprocess_node(&$vars) {
-  // Add a striping class.
-  $vars['classes_array'][] = 'node-' . $vars['zebra'];
-
-  // Add $unpublished variable.
-  $vars['unpublished'] = (!$vars['status']) ? TRUE : FALSE;
-
-  // Merge first/last class (from bbbf_preprocess_page) into classes array of current node object.
-  $node = $vars['node'];
-  if (!empty($node->classes_array)) {
-    $vars['classes_array'] = array_merge($vars['classes_array'], $node->classes_array);
-  }
-}
-
-function bbbf_preprocess_block(&$vars, $hook) {
-  // Add a striping class.
-  $vars['classes_array'][] = 'block-' . $vars['block_zebra'];
-
-  // Add first/last block classes
-  $first_last = "";
-  // If block id (count) is 1, it's first in region.
-  if ($vars['block_id'] == '1') {
-    $first_last = "first";
-    $vars['classes_array'][] = $first_last;
-  }
-  // Count amount of blocks about to be rendered in that region.
-  $block_count = count(block_list($vars['elements']['#block']->region));
-  if ($vars['block_id'] == $block_count) {
-    $first_last = "last";
-    $vars['classes_array'][] = $first_last;
-  }
-}
 
 /**
- * Return a themed breadcrumb trail.
- *
- * @param $breadcrumb
- *   An array containing the breadcrumb links.
- * @return
- *   A string containing the breadcrumb output.
- */
-function bbbf_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
-  // Determine if we are to display the breadcrumb.
-  $show_breadcrumb = theme_get_setting('bbbf_breadcrumb');
-  if ($show_breadcrumb == 'yes' || $show_breadcrumb == 'admin' && arg(0) == 'admin') {
-
-    // Optionally get rid of the homepage link.
-    $show_breadcrumb_home = theme_get_setting('bbbf_breadcrumb_home');
-    if (!$show_breadcrumb_home) {
-      array_shift($breadcrumb);
-    }
-
-    // Return the breadcrumb with separators.
-    if (!empty($breadcrumb)) {
-      $breadcrumb_separator = theme_get_setting('bbbf_breadcrumb_separator');
-      $trailing_separator = $title = '';
-      if (theme_get_setting('bbbf_breadcrumb_title')) {
-        $item = menu_get_item();
-        if (!empty($item['tab_parent'])) {
-          // If we are on a non-default tab, use the tab's title.
-          $title = check_plain($item['title']);
-        }
-        else {
-          $title = drupal_get_title();
-        }
-        if ($title) {
-          $trailing_separator = $breadcrumb_separator;
-        }
-      }
-      elseif (theme_get_setting('bbbf_breadcrumb_trailing')) {
-        $trailing_separator = $breadcrumb_separator;
-      }
-
-      // Provide a navigational heading to give context for breadcrumb links to
-      // screen-reader users. Make the heading invisible with .element-invisible.
-      $heading = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
-
-      return $heading . '<div class="breadcrumb">' . implode($breadcrumb_separator, $breadcrumb) . $trailing_separator . $title . '</div>';
-    }
-  }
-  // Otherwise, return an empty string.
-  return '';
-}
-
-/**
- * Converts a string to a suitable html ID attribute.
- *
- * http://www.w3.org/TR/html4/struct/global.html#h-7.5.2 specifies what makes a
- * valid ID attribute in HTML. This function:
- *
- * - Ensure an ID starts with an alpha character by optionally adding an 'n'.
- * - Replaces any character except A-Z, numbers, and underscores with dashes.
- * - Converts entire string to lowercase.
- *
- * @param $string
- *  The string
- * @return
- *  The converted string
- */
-function bbbf_id_safe($string) {
-  // Replace with dashes anything that isn't A-Z, numbers, dashes, or underscores.
-  $string = strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
-  // If the first character is not a-z, add 'n' in front.
-  if (!ctype_lower($string{0})) { // Don't use ctype_alpha since its locale aware.
-    $string = 'id'. $string;
-  }
-  return $string;
-}
-
-/**
- * Generate the HTML output for a menu link and submenu.
+ * Override or insert variables into the maintenance page template.
  *
  * @param $variables
- *  An associative array containing:
- *   - element: Structured array data for a menu link.
- *
- * @return
- *  A themed HTML string.
- *
- * @ingroup themeable
- *
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("maintenance_page" in this case.)
  */
-function bbbf_menu_link(array $variables) {
-  $element = $variables['element'];
-  $sub_menu = '';
-
-  if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
-  }
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  // Adding a class depending on the TITLE of the link (not constant)
-  $element['#attributes']['class'][] = bbbf_id_safe($element['#title']);
-  // Adding a class depending on the ID of the link (constant)
-  $element['#attributes']['class'][] = 'mid-' . $element['#original_link']['mlid'];
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+/* -- Delete this line if you want to use this function
+function bbbf_preprocess_maintenance_page(&$variables, $hook) {
+  // When a variable is manipulated or added in preprocess_html or
+  // preprocess_page, that same work is probably needed for the maintenance page
+  // as well, so we can just re-use those functions to do that work here.
+  bbbf_preprocess_html($variables, $hook);
+  bbbf_preprocess_page($variables, $hook);
 }
+// */
 
 /**
- * Override or insert variables into theme_menu_local_task().
+ * Override or insert variables into the html templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("html" in this case.)
  */
-function bbbf_preprocess_menu_local_task(&$variables) {
-  $link =& $variables['element']['#link'];
+/* -- Delete this line if you want to use this function
+function bbbf_preprocess_html(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
 
-  // If the link does not contain HTML already, check_plain() it now.
-  // After we set 'html'=TRUE the link will not be sanitized by l().
-  if (empty($link['localized_options']['html'])) {
-    $link['title'] = check_plain($link['title']);
-  }
-  $link['localized_options']['html'] = TRUE;
-  $link['title'] = '<span class="tab">' . $link['title'] . '</span>';
+  // The body tag's classes are controlled by the $classes_array variable. To
+  // remove a class from $classes_array, use array_diff().
+  //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
 }
+// */
 
 /**
- * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
+ * Override or insert variables into the page templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("page" in this case.)
  */
-function bbbf_menu_local_tasks(&$variables) {
-  $output = '';
-
-  if (!empty($variables['primary'])) {
-    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] .= '<ul class="tabs primary clearfix">';
-    $variables['primary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['primary']);
-  }
-  if (!empty($variables['secondary'])) {
-    $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $variables['secondary']['#prefix'] .= '<ul class="tabs secondary clearfix">';
-    $variables['secondary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['secondary']);
-  }
-  return $output;
+/* -- Delete this line if you want to use this function
+function bbbf_preprocess_page(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
 }
+// */
+
+/**
+ * Override or insert variables into the node templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("node" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function bbbf_preprocess_node(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+
+  // Optionally, run node-type-specific preprocess functions, like
+  // bbbf_preprocess_node_page() or bbbf_preprocess_node_story().
+  $function = __FUNCTION__ . '_' . $variables['node']->type;
+  if (function_exists($function)) {
+    $function($variables, $hook);
+  }
+}
+// */
+
+/**
+ * Override or insert variables into the comment templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("comment" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function bbbf_preprocess_comment(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+}
+// */
+
+/**
+ * Override or insert variables into the region templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("region" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function bbbf_preprocess_region(&$variables, $hook) {
+  // Don't use Zen's region--sidebar.tpl.php template for sidebars.
+  //if (strpos($variables['region'], 'sidebar_') === 0) {
+  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
+  //}
+}
+// */
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("block" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function bbbf_preprocess_block(&$variables, $hook) {
+  // Add a count to all the blocks in the region.
+  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
+
+  // By default, Zen will use the block--no-wrapper.tpl.php for the main
+  // content. This optional bit of code undoes that:
+  //if ($variables['block_html_id'] == 'block-system-main') {
+  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
+  //}
+}
+// */
