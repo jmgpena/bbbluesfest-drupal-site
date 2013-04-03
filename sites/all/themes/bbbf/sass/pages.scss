@@ -106,7 +106,7 @@ body {
     margin: 0 auto;
   }
   .block { 
-    width: 336px;
+    width: 306px;
     padding: 0 15px;
     float: left; 
     h2 { font: 36px/38px $title-font; }
@@ -128,8 +128,54 @@ body {
  */
 
 #content {
-  width: 980px;
+  width: 1008px;
   margin: 0 auto;
+  #page-title {
+    font: 36px/38px $title-font;
+    border-bottom: 2px double gray;
+  }
+    
+  .view-id-novidades {
+    .item-list {
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          display: inline-block;
+          vertical-alignment: top;
+          width: 434px;
+          padding: 29px 0 30px 30px;
+          img {
+            float: left;
+            margin-right: 15px;
+          }
+          .field-name-post-date {
+            font-size: 13px;
+            font-weight: bold;
+            color: $orange;
+          }
+          .field-name-title {
+            h2 { 
+              margin: 0 0 20px 0;
+              font: 24px/30px $title-font;
+            }
+          }
+          .field-name-node-link {
+            a {
+              display: inline-block;
+              border: 1px solid #939189;
+              padding: 0 9px;
+              color: #f4f2e7;
+              background-color: #a9a8a1;
+              text-decoration: none;
+              font-variant: small-caps;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 .region-highlighted {
@@ -258,12 +304,40 @@ span.field-label { /* The inline field label used by the Fences module */
  * Footer
  */
 
+#footer-wrapper {
+  background-color: black;
+  color: white;
+}
+
 #footer {
+  width: 988px;
+  margin: 0 auto;
+  .block {
+    width: 306px;
+    h2 {
+      font: 36px/38px $title-font;
+    }
+  }
 }
 
 /*
  * Page bottom
  */
 
+#bottom-wrapper {
+  background-color: black;
+  color: white;
+}
+
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
+  width: 988px;
+  margin: 0 auto;
+  border-top: 1px solid white;
+  font: 13px/16px Verdana;
+  color: darkgray;
+  a {
+    color: white;
+    font-weigth: bold;
+    text-decoration: none;
+  }
 }

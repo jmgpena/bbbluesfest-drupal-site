@@ -194,8 +194,8 @@
 
   </div><!-- /#main -->
 
-  <?php print render($page['footer']); ?>
+  <div id="footer-wrapper"><?php print render($page['footer']); ?></div>
 
 </div><!-- /#page -->
 
-<?php print render($page['bottom']); ?>
+<div id="bottom-wrapper"><?php print render($page['bottom']); ?></div>

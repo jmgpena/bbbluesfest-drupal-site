@@ -209,12 +209,12 @@
 }
 /* line 140, ../sass/blocks.scss */
 #block-views-fotos-block img {
+  width: 98px;
   float: left;
-  margin-right: 4px;
+  margin: 0 4px 4px 0;
 }
 
-/* line 144, ../sass/blocks.scss */
-#block-views-videos-block iframe {
-  max-width: 306px;
-  max-height: 306px;
+/* line 148, ../sass/blocks.scss */
+#block-views-videos-block {
+  height: 306px;
 }

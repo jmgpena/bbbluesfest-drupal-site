@@ -137,12 +137,14 @@
 
 #block-views-fotos-block {
   padding: 0 15px;
-  img { float: left; margin-right: 4px; }
+  img { 
+    width: 98px;
+    float: left;
+    margin: 0 4px 4px 0; 
+    
+  }
 }
 
 #block-views-videos-block {
-  iframe { 
-    max-width: 306px;
-    max-height: 306px;
-  }
+  height: 306px;
 }
