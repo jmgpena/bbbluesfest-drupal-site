@@ -102,8 +102,14 @@ body {
 #triptic {
   background-color: $light-blue;
   .inner_triptic {
-    width: 980px;
+    width: 1008px;
     margin: 0 auto;
+  }
+  .block { 
+    width: 336px;
+    padding: 0 15px;
+    float: left; 
+    h2 { font: 36px/38px $title-font; }
   }
 }
 
@@ -112,6 +118,7 @@ body {
  */
 
 #main {
+  clear: both;
   padding-top: 4px;
   background-color: $bbbf-blue;
 }

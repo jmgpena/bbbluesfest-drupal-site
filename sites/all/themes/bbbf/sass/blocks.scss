@@ -136,9 +136,13 @@
 }
 
 #block-views-fotos-block {
-  width: 336px;
   padding: 0 15px;
-  h2 { font: 36px/38px $title-font; }
-  //img { float: left; }
-  width: 400px;
+  img { float: left; margin-right: 4px; }
+}
+
+#block-views-videos-block {
+  iframe { 
+    max-width: 306px;
+    max-height: 306px;
+  }
 }

@@ -205,11 +205,16 @@
 
 /* line 138, ../sass/blocks.scss */
 #block-views-fotos-block {
-  width: 336px;
   padding: 0 15px;
-  width: 400px;
 }
-/* line 141, ../sass/blocks.scss */
-#block-views-fotos-block h2 {
-  font: 36px/38px "CubanoRegular", sans-serif;
+/* line 140, ../sass/blocks.scss */
+#block-views-fotos-block img {
+  float: left;
+  margin-right: 4px;
+}
+
+/* line 144, ../sass/blocks.scss */
+#block-views-videos-block iframe {
+  max-width: 306px;
+  max-height: 306px;
 }
