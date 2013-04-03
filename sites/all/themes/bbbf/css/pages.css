@@ -364,12 +364,14 @@ span.field-label {
 #footer {
   width: 988px;
   margin: 0 auto;
+  padding-top: 20px;
 }
-/* line 315, ../sass/pages.scss */
+/* line 316, ../sass/pages.scss */
 #footer .block {
+  float: left;
   width: 306px;
 }
-/* line 317, ../sass/pages.scss */
+/* line 319, ../sass/pages.scss */
 #footer .block h2 {
   font: 36px/38px "CubanoRegular", sans-serif;
 }
@@ -377,13 +379,13 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 327, ../sass/pages.scss */
+/* line 329, ../sass/pages.scss */
 #bottom-wrapper {
   background-color: black;
   color: white;
 }
 
-/* line 332, ../sass/pages.scss */
+/* line 334, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
   width: 988px;
@@ -392,7 +394,7 @@ span.field-label {
   font: 13px/16px Verdana;
   color: darkgray;
 }
-/* line 338, ../sass/pages.scss */
+/* line 340, ../sass/pages.scss */
 .region-bottom a {
   color: white;
   font-weigth: bold;
