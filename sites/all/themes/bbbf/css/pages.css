@@ -52,101 +52,135 @@ body {
   height: 20px;
   background-color: black;
   color: white;
+  font-family: "CubanoRegular", sans-serif;
 }
-/* line 54, ../sass/pages.scss */
+/* line 55, ../sass/pages.scss */
 #topbar .region-topbar {
   width: 988px;
   margin: 0 auto;
 }
-/* line 57, ../sass/pages.scss */
+/* line 58, ../sass/pages.scss */
 #topbar .region-topbar p {
   margin: 0;
 }
+/* line 59, ../sass/pages.scss */
+#topbar .region-topbar .block {
+  float: left;
+  padding: 0 15px;
+}
 
-/* line 61, ../sass/pages.scss */
+/* line 66, ../sass/pages.scss */
 #header-wrapper {
   height: 105px;
   background-color: #e9f5fc;
 }
 
-/* line 66, ../sass/pages.scss */
+/* line 71, ../sass/pages.scss */
 #header {
   width: 988px;
   margin: 0 auto;
 }
 
-/* line 71, ../sass/pages.scss */
+/* line 76, ../sass/pages.scss */
 #logo {
   /* Wrapping link for logo */
   float: left;
   /* LTR */
   padding: 10px 0 0 0;
 }
-/* line 76, ../sass/pages.scss */
+/* line 81, ../sass/pages.scss */
 #logo img {
   vertical-align: bottom;
 }
 
-/* line 81, ../sass/pages.scss */
+/* line 86, ../sass/pages.scss */
 #name-and-slogan {
   /* Wrapper for website name and slogan */
   float: left;
 }
 
-/* line 85, ../sass/pages.scss */
+/* line 90, ../sass/pages.scss */
 #site-name {
   /* The name of the website */
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
 }
-/* line 91, ../sass/pages.scss */
+/* line 96, ../sass/pages.scss */
 #site-name a:link,
 #site-name a:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 97, ../sass/pages.scss */
+/* line 102, ../sass/pages.scss */
 #site-name a:hover,
 #site-name a:focus {
   text-decoration: underline;
 }
 
-/* line 102, ../sass/pages.scss */
+/* line 107, ../sass/pages.scss */
 #site-slogan {
   /* The slogan (or tagline) of a website */
   margin: 0;
   font-size: 1em;
 }
 
-/* line 107, ../sass/pages.scss */
+/* line 112, ../sass/pages.scss */
 .region-header {
   /* Wrapper for any blocks placed in the header region */
 }
 
-/* line 111, ../sass/pages.scss */
+/* line 116, ../sass/pages.scss */
 #slideshow {
   background-color: black;
 }
+/* line 120, ../sass/pages.scss */
+#slideshow span#views_slideshow_controls_text_previous_featured-block a {
+  display: block;
+  z-index: 100;
+  width: 25px;
+  height: 46px;
+  margin: -23px 0 0;
+  background: url(../images/btn-prev-next.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  text-indent: -999em;
+}
+/* line 134, ../sass/pages.scss */
+#slideshow span#views_slideshow_controls_text_next_featured-block a {
+  display: block;
+  z-index: 100;
+  width: 25px;
+  height: 46px;
+  margin: -23px 0 0;
+  background: url(../images/btn-prev-next.png) no-repeat;
+  background-position: -25px 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  text-indent: -999em;
+}
 
-/* line 115, ../sass/pages.scss */
+/* line 151, ../sass/pages.scss */
 #triptic {
   padding: 10px 0;
   height: 356px;
   background-color: #e9f5fc;
 }
-/* line 119, ../sass/pages.scss */
+/* line 155, ../sass/pages.scss */
 #triptic .inner_triptic {
   width: 1008px;
   margin: 0 auto;
 }
-/* line 123, ../sass/pages.scss */
+/* line 159, ../sass/pages.scss */
 #triptic .block {
   width: 306px;
   padding: 0 15px;
   float: left;
 }
-/* line 127, ../sass/pages.scss */
+/* line 163, ../sass/pages.scss */
 #triptic .block h2 {
   font: 36px/38px "CubanoRegular", sans-serif;
 }
@@ -154,7 +188,7 @@ body {
 /*
  * Main (container for everything else)
  */
-/* line 135, ../sass/pages.scss */
+/* line 171, ../sass/pages.scss */
 #main {
   clear: both;
   padding-top: 4px;
@@ -164,45 +198,47 @@ body {
 /*
  * Content
  */
-/* line 145, ../sass/pages.scss */
+/* line 181, ../sass/pages.scss */
 #content {
   width: 1008px;
   margin: 0 auto;
+  padding: 0 15px;
 }
-/* line 148, ../sass/pages.scss */
+/* line 185, ../sass/pages.scss */
 #content #page-title {
   font: 36px/38px "CubanoRegular", sans-serif;
   border-bottom: 2px double gray;
 }
-/* line 155, ../sass/pages.scss */
+/* line 192, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul {
   list-style: none;
   padding: 0;
 }
-/* line 158, ../sass/pages.scss */
+/* line 195, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li {
   display: inline-block;
   vertical-alignment: top;
-  width: 434px;
-  padding: 29px 0 30px 30px;
+  width: 474px;
+  padding: 15px 0 15px 0;
+  margin-right: 10px;
 }
-/* line 163, ../sass/pages.scss */
+/* line 201, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li img {
   float: left;
   margin-right: 15px;
 }
-/* line 167, ../sass/pages.scss */
+/* line 205, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li .field-name-post-date {
   font-size: 13px;
   font-weight: bold;
   color: #dd5e00;
 }
-/* line 173, ../sass/pages.scss */
+/* line 211, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li .field-name-title h2 {
   margin: 0 0 20px 0;
   font: 24px/30px "CubanoRegular", sans-serif;
 }
-/* line 179, ../sass/pages.scss */
+/* line 217, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li .field-name-node-link a {
   display: inline-block;
   border: 1px solid #939189;
@@ -213,16 +249,16 @@ body {
   font-variant: small-caps;
 }
 
-/* line 199, ../sass/pages.scss */
+/* line 237, ../sass/pages.scss */
 .breadcrumb {
   /* The path to the current page in the form of a list of links */
 }
-/* line 200, ../sass/pages.scss */
+/* line 238, ../sass/pages.scss */
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 204, ../sass/pages.scss */
+/* line 242, ../sass/pages.scss */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -230,7 +266,7 @@ body {
   padding: 0;
 }
 
-/* line 217, ../sass/pages.scss */
+/* line 255, ../sass/pages.scss */
 h1.title,
 h2.node-title,
 h2.block-title,
@@ -241,37 +277,37 @@ h3.title {
   margin: 0;
 }
 
-/* line 221, ../sass/pages.scss */
+/* line 259, ../sass/pages.scss */
 tr.even {
   /* Some tables have rows marked even or odd. */
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 225, ../sass/pages.scss */
+/* line 263, ../sass/pages.scss */
 tr.odd {
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 229, ../sass/pages.scss */
+/* line 267, ../sass/pages.scss */
 div.messages {
   /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 1.5em 0;
   /* Drupal core uses "6px 0" margin */
 }
-/* line 232, ../sass/pages.scss */
+/* line 270, ../sass/pages.scss */
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 238, ../sass/pages.scss */
+/* line 276, ../sass/pages.scss */
 div.status {
   /* Normal priority messages */
 }
 
-/* line 242, ../sass/pages.scss */
+/* line 280, ../sass/pages.scss */
 div.warning,
 tr.warning {
   /* Medium priority messages */
@@ -279,53 +315,53 @@ tr.warning {
   /* Drupal core uses: 1px solid #f0c020 */
 }
 
-/* line 247, ../sass/pages.scss */
+/* line 285, ../sass/pages.scss */
 div.error,
 tr.error {
   /* High priority messages. See also the .error declaration below. */
 }
 
-/* line 250, ../sass/pages.scss */
+/* line 288, ../sass/pages.scss */
 .error {
   /* Errors that are separate from div.messages status messages. */
   /* color: #e55; */
   /* Drupal core uses a #e55 background */
 }
 
-/* line 254, ../sass/pages.scss */
+/* line 292, ../sass/pages.scss */
 .warning {
   /* Warnings that are separate from div.messages status messages. */
   /* color: #e09010; */
   /* Drupal core uses a #e09010 background */
 }
 
-/* line 258, ../sass/pages.scss */
+/* line 296, ../sass/pages.scss */
 .tabs {
   /* See also the tabs.css file. */
 }
 
-/* line 261, ../sass/pages.scss */
+/* line 299, ../sass/pages.scss */
 .region-help {
   /* Help text on a page */
 }
 
-/* line 264, ../sass/pages.scss */
+/* line 302, ../sass/pages.scss */
 .more-help-link {
   /* Link to more help */
 }
 
-/* line 267, ../sass/pages.scss */
+/* line 305, ../sass/pages.scss */
 .region-content {
   /* Wrapper for the actual page content */
 }
 
-/* line 270, ../sass/pages.scss */
+/* line 308, ../sass/pages.scss */
 ul.inline {
   /* List of links generated by theme_links() */
   display: inline;
   padding: 0;
 }
-/* line 274, ../sass/pages.scss */
+/* line 312, ../sass/pages.scss */
 ul.inline li {
   display: inline;
   list-style-type: none;
@@ -333,30 +369,30 @@ ul.inline li {
   /* LTR */
 }
 
-/* line 280, ../sass/pages.scss */
+/* line 318, ../sass/pages.scss */
 span.field-label {
   /* The inline field label used by the Fences module */
   padding: 0 1em 0 0;
   /* LTR */
 }
 
-/* line 284, ../sass/pages.scss */
+/* line 322, ../sass/pages.scss */
 .item-list .pager {
   /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
 }
-/* line 287, ../sass/pages.scss */
+/* line 325, ../sass/pages.scss */
 .item-list .pager li {
   /* Each page number in the pager list */
   padding: 0 0.5em;
 }
 
-/* line 292, ../sass/pages.scss */
+/* line 330, ../sass/pages.scss */
 .feed-icon {
   /* The link to the RSS or Atom feed for the current list of content */
 }
 
-/* line 295, ../sass/pages.scss */
+/* line 333, ../sass/pages.scss */
 .more-link {
   /* Aggregator, blog, and forum more link */
 }
@@ -376,24 +412,24 @@ span.field-label {
 /*
  * Footer
  */
-/* line 322, ../sass/pages.scss */
+/* line 360, ../sass/pages.scss */
 #footer-wrapper {
   background-color: black;
   color: white;
 }
 
-/* line 327, ../sass/pages.scss */
+/* line 365, ../sass/pages.scss */
 #footer {
   width: 988px;
   margin: 0 auto;
   padding-top: 20px;
 }
-/* line 331, ../sass/pages.scss */
+/* line 369, ../sass/pages.scss */
 #footer .block {
   float: left;
   width: 306px;
 }
-/* line 334, ../sass/pages.scss */
+/* line 372, ../sass/pages.scss */
 #footer .block h2 {
   font: 36px/38px "CubanoRegular", sans-serif;
 }
@@ -401,13 +437,13 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 344, ../sass/pages.scss */
+/* line 382, ../sass/pages.scss */
 #bottom-wrapper {
   background-color: black;
   color: white;
 }
 
-/* line 349, ../sass/pages.scss */
+/* line 387, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
   width: 988px;
@@ -416,7 +452,7 @@ span.field-label {
   font: 13px/16px Verdana;
   color: darkgray;
 }
-/* line 355, ../sass/pages.scss */
+/* line 393, ../sass/pages.scss */
 .region-bottom a {
   color: white;
   font-weigth: bold;

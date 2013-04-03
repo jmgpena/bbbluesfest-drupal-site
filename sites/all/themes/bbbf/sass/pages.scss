@@ -50,11 +50,16 @@ body {
   height: 20px;
   background-color: black;
   color: white;
+  font-family: $title-font;
 
   .region-topbar {
     width: 988px;
     margin: 0 auto;
     p { margin: 0; }
+    .block {
+      float: left;
+      padding: 0 15px;
+    }
   }
 }
 
@@ -110,6 +115,37 @@ body {
 
 #slideshow {
   background-color: black;
+
+  span#views_slideshow_controls_text_previous_featured-block {
+    a {
+      display: block;
+      z-index: 100;
+      width: 25px;
+      height: 46px;
+      margin: -23px 0 0;
+      background: url(../images/btn-prev-next.png) no-repeat;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      text-indent: -999em;
+    }
+  }
+  span#views_slideshow_controls_text_next_featured-block {
+    a {
+      display: block;
+      z-index: 100;
+      width: 25px;
+      height: 46px;
+      margin: -23px 0 0;
+      background: url(../images/btn-prev-next.png) no-repeat;
+      background-position: -25px 0;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      cursor: pointer;
+      text-indent: -999em;
+    }
+  }
 }
 
 #triptic {
@@ -145,6 +181,7 @@ body {
 #content {
   width: 1008px;
   margin: 0 auto;
+  padding: 0 15px;
   #page-title {
     font: 36px/38px $title-font;
     border-bottom: 2px double gray;
@@ -158,8 +195,9 @@ body {
         li {
           display: inline-block;
           vertical-alignment: top;
-          width: 434px;
-          padding: 29px 0 30px 30px;
+          width: 474px;
+          padding: 15px 0 15px 0;
+          margin-right: 10px;
           img {
             float: left;
             margin-right: 15px;
