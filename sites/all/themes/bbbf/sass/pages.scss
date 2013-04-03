@@ -45,19 +45,33 @@ body {
  * Header
  */
 
-#header {
+#topbar {
+  padding: 10px 0;
+  height: 20px;
+  background-color: black;
+  color: white;
+
+  .region-topbar {
+    width: 988px;
+    margin: 0 auto;
+    p { margin: 0; }
+  }
+}
+
+#header-wrapper {
   height: 105px;
   background-color: $light-blue;
 }
 
+#header {
+  width: 988px;
+  margin: 0 auto;
+}
+
 #logo { /* Wrapping link for logo */
-  position: absolute;
-  left: 50%;
-  margin: 0 0 0 -491px;
-  top: 30px;
-  //float: left; /* LTR */
+  float: left; /* LTR */
   //margin: 0;
-  padding: 0;
+  padding: 10px 0 0 0;
 
   img {
     vertical-align: bottom;
@@ -96,10 +110,11 @@ body {
 
 #slideshow {
   background-color: black;
-  height: 440px;
 }
 
 #triptic {
+  padding: 10px 0;
+  height: 356px;
   background-color: $light-blue;
   .inner_triptic {
     width: 1008px;

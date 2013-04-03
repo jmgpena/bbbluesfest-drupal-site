@@ -77,7 +77,7 @@
     </div>
   <?php endif; ?>
 
-  <header id="header" role="banner">
+  <div id="header-wrapper"><header id="header" role="banner">
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
@@ -115,7 +115,7 @@
 
     <?php print render($page['header']); ?>
 
-  </header>
+  </header></div>
 
   <?php if ($page['slideshow']) :?>
     <div id="slideshow">
