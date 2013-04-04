@@ -165,13 +165,17 @@ body {
  */
 
 a:link {
+  color: $link;
+  text-decoration: underline;
 }
 
 a:visited {
+  color: $link-visited;
 }
 
 a:hover,
 a:focus {
+  color: $link-hover;
 }
 
 a:active {

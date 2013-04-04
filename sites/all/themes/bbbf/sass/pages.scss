@@ -116,8 +116,23 @@ body {
 #slideshow {
   background-color: black;
 
-  .view-content {
+  #block-views-featured-block {
     max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .views-field-title {
+    position: absolute;
+    font: 39px/44px $title-font;
+    left: 17.5%;
+    top: 28.5%;
+    text-shadow: #444 0 2px 2px;
+    width: 310px;
+    color: white;
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
 
   span#views_slideshow_controls_text_previous_featured-block {
@@ -412,5 +427,8 @@ span.field-label { /* The inline field label used by the Fences module */
     color: white;
     font-weigth: bold;
     text-decoration: none;
+  }
+  p {
+    margin: 4px 0 0;
   }
 }
