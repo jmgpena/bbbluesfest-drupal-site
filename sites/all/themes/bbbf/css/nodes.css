@@ -55,29 +55,37 @@
   /* A node displayed as teaser */
   margin: 10px 0 0 0;
 }
+/* line 45, ../sass/nodes.scss */
+.node-teaser a {
+  text-decoration: none;
+}
+/* line 47, ../sass/nodes.scss */
+.node-teaser a:visited {
+  color: black;
+}
 
 /*
  * All nodes are given a node-FOO class that describes the type of content that
  * it is. If you create a new content type called "my-custom-type", it will
  * receive a "node-my-custom-type" class.
  */
-/* line 53, ../sass/nodes.scss */
+/* line 57, ../sass/nodes.scss */
 .node-page {
   /* Page content node */
 }
 
-/* line 56, ../sass/nodes.scss */
+/* line 60, ../sass/nodes.scss */
 .node-article {
   /* Article content node */
 }
 
-/* line 59, ../sass/nodes.scss */
+/* line 63, ../sass/nodes.scss */
 .node-unpublished {
   /* Unpublished nodes */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-/* line 62, ../sass/nodes.scss */
+/* line 66, ../sass/nodes.scss */
 .node-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -92,47 +100,90 @@
   word-wrap: break-word;
 }
 
-/* line 69, ../sass/nodes.scss */
+/* line 71, ../sass/nodes.scss */
+.comment-wrapper {
+  clear: both;
+}
+
+/* line 77, ../sass/nodes.scss */
 .node-banda.node-teaser .field-name-title h2 {
   font: 24px/28px "CubanoRegular", sans-serif;
   margin: 0;
 }
-/* line 74, ../sass/nodes.scss */
+/* line 82, ../sass/nodes.scss */
 .node-banda.node-teaser .field-name-field-fotos {
   float: left;
   margin: 0 10px 10px 0;
 }
-/* line 80, ../sass/nodes.scss */
+/* line 88, ../sass/nodes.scss */
 .node-banda.node-teaser .field-name-body p {
   margin: 0;
 }
 
-/* line 86, ../sass/nodes.scss */
+/* line 94, ../sass/nodes.scss */
 .node-galeria.node-teaser .field-name-title h2 {
   font: 24px/28px "CubanoRegular", sans-serif;
   margin: 0;
 }
-/* line 91, ../sass/nodes.scss */
+/* line 99, ../sass/nodes.scss */
 .node-galeria.node-teaser .field-name-field-foto {
   float: left;
   margin: 0 10px 10px 0;
 }
 
-/* line 97, ../sass/nodes.scss */
+/* line 105, ../sass/nodes.scss */
 .node-article.node-teaser {
   margin: 10px 0 0 0;
 }
-/* line 100, ../sass/nodes.scss */
+/* line 108, ../sass/nodes.scss */
 .node-article.node-teaser .field-name-title h2 {
   font: 24px/28px "CubanoRegular", sans-serif;
   margin: 0;
 }
-/* line 105, ../sass/nodes.scss */
+/* line 113, ../sass/nodes.scss */
 .node-article.node-teaser .field-name-field-image {
   float: left;
   margin: 0 10px 10px 0;
 }
-/* line 111, ../sass/nodes.scss */
+/* line 119, ../sass/nodes.scss */
 .node-article.node-teaser .field-name-body p {
   margin: 0;
+}
+
+/* line 124, ../sass/nodes.scss */
+.node-banda.view-mode-full .group-left {
+  width: 306px;
+}
+/* line 127, ../sass/nodes.scss */
+.node-banda.view-mode-full .group-right {
+  padding: 0 0 0 15px;
+  width: 649px;
+}
+/* line 130, ../sass/nodes.scss */
+.node-banda.view-mode-full .group-right p {
+  margin: 0 0 10px 0;
+  text-align: justify;
+}
+/* line 136, ../sass/nodes.scss */
+.node-banda.view-mode-full .field-name-field-datalocal {
+  font: 26px/30px "CubanoRegular", sans-serif;
+  margin: 0 0 30px 0;
+}
+/* line 141, ../sass/nodes.scss */
+.node-banda.view-mode-full .field-name-field-discografia {
+  background-color: #9dc9e2;
+}
+/* line 143, ../sass/nodes.scss */
+.node-banda.view-mode-full .field-name-field-discografia p {
+  font-size: small;
+}
+/* line 148, ../sass/nodes.scss */
+.node-banda.view-mode-full h3.field-label {
+  margin: 15px 0 10px 0;
+}
+
+/* line 154, ../sass/nodes.scss */
+.node-galeria.view-mode-full .field-name-field-foto {
+  float: left;
+  margin: 15px 15px 0 0;
 }

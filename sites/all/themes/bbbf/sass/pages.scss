@@ -444,6 +444,11 @@ span.field-label { /* The inline field label used by the Fences module */
     margin: 10px 0;
     background-color: $dark-blue;
     padding: 5px 15px;
+    a {
+      color: inherit;
+      &:hover { color: $orange; }
+      &:visited { color: inherit; }
+    }
   }
   #day28 { clear: none; }
   #day29 { float: right; clear: none; }

@@ -42,6 +42,10 @@
 
 .node-teaser { /* A node displayed as teaser */
   margin: 10px 0 0 0;
+  a {
+    text-decoration: none;
+    &:visited { color: black; }
+  }
 }
 
 /*
@@ -62,6 +66,10 @@
   p.unpublished { /* The word "Unpublished" displayed underneath the content. */
     @include unpublished-div;
   }
+}
+
+.comment-wrapper {
+  clear: both;
 }
 
 .node-banda.node-teaser {
@@ -109,5 +117,42 @@
 
   .field-name-body {
     p { margin: 0; }
+  }
+}
+
+.node-banda.view-mode-full {
+  .group-left {
+    width: 306px;
+  }
+  .group-right {
+    padding: 0 0 0 15px;
+    width: 649px;
+    p {
+      margin: 0 0 10px 0;
+      text-align: justify;
+    }
+  }
+
+  .field-name-field-datalocal {
+    font: 26px/30px $title-font;
+    margin: 0 0 30px 0;
+  }
+
+  .field-name-field-discografia {
+    background-color: $dark-blue;
+    p {
+      font-size: small;
+    }
+  }
+  
+  h3.field-label {
+    margin: 15px 0 10px 0;
+  }
+}
+
+.node-galeria.view-mode-full {
+  .field-name-field-foto {
+    float: left;
+    margin: 15px 15px 0 0;
   }
 }

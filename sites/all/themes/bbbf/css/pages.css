@@ -499,22 +499,34 @@ span.field-label {
   background-color: #9dc9e2;
   padding: 5px 15px;
 }
-/* line 448, ../sass/pages.scss */
+/* line 447, ../sass/pages.scss */
+.node-6.node-page .day a, .node-6.node-page .bigday a {
+  color: inherit;
+}
+/* line 449, ../sass/pages.scss */
+.node-6.node-page .day a:hover, .node-6.node-page .bigday a:hover {
+  color: #dd5e00;
+}
+/* line 450, ../sass/pages.scss */
+.node-6.node-page .day a:visited, .node-6.node-page .bigday a:visited {
+  color: inherit;
+}
+/* line 453, ../sass/pages.scss */
 .node-6.node-page #day28 {
   clear: none;
 }
-/* line 449, ../sass/pages.scss */
+/* line 454, ../sass/pages.scss */
 .node-6.node-page #day29 {
   float: right;
   clear: none;
 }
-/* line 451, ../sass/pages.scss */
+/* line 456, ../sass/pages.scss */
 .node-6.node-page .bigday .daynumber {
   font: 49px/54px "CubanoRegular", sans-serif;
   text-shadow: #444444 0 4px 4px;
   color: white;
 }
-/* line 459, ../sass/pages.scss */
+/* line 464, ../sass/pages.scss */
 .node-6.node-page .day .daynumber {
   font: 39px/39px "CubanoRegular", sans-serif;
   text-shadow: #444444 0 4px 4px;
@@ -522,32 +534,32 @@ span.field-label {
   float: left;
   margin: 0 10px 20px 0;
 }
-/* line 468, ../sass/pages.scss */
+/* line 473, ../sass/pages.scss */
 .node-6.node-page .black {
   color: black;
 }
-/* line 469, ../sass/pages.scss */
+/* line 474, ../sass/pages.scss */
 .node-6.node-page .white {
   color: white;
 }
-/* line 471, ../sass/pages.scss */
+/* line 476, ../sass/pages.scss */
 .node-6.node-page .bigband {
   font: 34px/36px "CubanoRegular", sans-serif;
   margin: 10px 0 0 0;
 }
-/* line 476, ../sass/pages.scss */
+/* line 481, ../sass/pages.scss */
 .node-6.node-page .band {
   font: 24px/28px "CubanoRegular", sans-serif;
 }
-/* line 480, ../sass/pages.scss */
+/* line 485, ../sass/pages.scss */
 .node-6.node-page .label {
   font: 13px/16px "CubanoRegular", sans-serif;
 }
-/* line 484, ../sass/pages.scss */
+/* line 489, ../sass/pages.scss */
 .node-6.node-page .feat {
   font: 16px/18px "CubanoRegular", sans-serif;
 }
-/* line 488, ../sass/pages.scss */
+/* line 493, ../sass/pages.scss */
 .node-6.node-page a {
   text-decoration: none;
 }
