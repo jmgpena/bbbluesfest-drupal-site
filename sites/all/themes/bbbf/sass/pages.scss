@@ -252,7 +252,7 @@ body {
               border: 1px solid #939189;
               padding: 0 9px;
               color: #f4f2e7;
-              background-color: #a9a8a1;
+              background-color: $panel;
               text-decoration: none;
               font-variant: small-caps;
             }
@@ -430,5 +430,62 @@ span.field-label { /* The inline field label used by the Fences module */
   }
   p {
     margin: 4px 0 0;
+  }
+}
+
+/*
+ * Programa do Festival
+ */
+.node-6.node-page {
+  .day,.bigday {
+    width: 444px;
+    float: left;
+    clear: left;
+    margin: 10px 0;
+    background-color: $dark-blue;
+    padding: 5px 15px;
+  }
+  #day28 { clear: none; }
+  #day29 { float: right; clear: none; }
+  .bigday {
+    .daynumber {
+      font: 49px/54px $title-font;
+      text-shadow: #444 0 4px 4px;
+      color: white;
+    }
+  }
+
+  .day {
+    .daynumber {
+      font: 39px/39px $title-font;
+      text-shadow: #444 0 4px 4px;
+      color: white;
+      float: left;
+      margin: 0 10px 20px 0;
+    }
+  }
+
+  .black { color: black; }
+  .white { color: white; }
+
+  .bigband {
+    font: 34px/36px $title-font;
+    margin: 10px 0 0 0;
+  }
+
+  .band {
+    font: 24px/28px $title-font;
+  }
+
+  .label {
+    font: 13px/16px $title-font;
+  }
+
+  .feat {
+    font: 16px/18px $title-font;
+  }
+
+  a {
+    text-decoration: none;
   }
 }

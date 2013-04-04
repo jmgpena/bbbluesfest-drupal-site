@@ -53,6 +53,7 @@
 /* line 43, ../sass/nodes.scss */
 .node-teaser {
   /* A node displayed as teaser */
+  margin: 10px 0 0 0;
 }
 
 /*
@@ -60,23 +61,23 @@
  * it is. If you create a new content type called "my-custom-type", it will
  * receive a "node-my-custom-type" class.
  */
-/* line 52, ../sass/nodes.scss */
+/* line 53, ../sass/nodes.scss */
 .node-page {
   /* Page content node */
 }
 
-/* line 55, ../sass/nodes.scss */
+/* line 56, ../sass/nodes.scss */
 .node-article {
   /* Article content node */
 }
 
-/* line 58, ../sass/nodes.scss */
+/* line 59, ../sass/nodes.scss */
 .node-unpublished {
   /* Unpublished nodes */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-/* line 61, ../sass/nodes.scss */
+/* line 62, ../sass/nodes.scss */
 .node-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -89,4 +90,49 @@
   text-transform: uppercase;
   text-align: center;
   word-wrap: break-word;
+}
+
+/* line 69, ../sass/nodes.scss */
+.node-banda.node-teaser .field-name-title h2 {
+  font: 24px/28px "CubanoRegular", sans-serif;
+  margin: 0;
+}
+/* line 74, ../sass/nodes.scss */
+.node-banda.node-teaser .field-name-field-fotos {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+/* line 80, ../sass/nodes.scss */
+.node-banda.node-teaser .field-name-body p {
+  margin: 0;
+}
+
+/* line 86, ../sass/nodes.scss */
+.node-galeria.node-teaser .field-name-title h2 {
+  font: 24px/28px "CubanoRegular", sans-serif;
+  margin: 0;
+}
+/* line 91, ../sass/nodes.scss */
+.node-galeria.node-teaser .field-name-field-foto {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/* line 97, ../sass/nodes.scss */
+.node-article.node-teaser {
+  margin: 10px 0 0 0;
+}
+/* line 100, ../sass/nodes.scss */
+.node-article.node-teaser .field-name-title h2 {
+  font: 24px/28px "CubanoRegular", sans-serif;
+  margin: 0;
+}
+/* line 105, ../sass/nodes.scss */
+.node-article.node-teaser .field-name-field-image {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+/* line 111, ../sass/nodes.scss */
+.node-article.node-teaser .field-name-body p {
+  margin: 0;
 }

@@ -41,6 +41,7 @@
 }
 
 .node-teaser { /* A node displayed as teaser */
+  margin: 10px 0 0 0;
 }
 
 /*
@@ -60,5 +61,53 @@
 
   p.unpublished { /* The word "Unpublished" displayed underneath the content. */
     @include unpublished-div;
+  }
+}
+
+.node-banda.node-teaser {
+  .field-name-title {
+    h2 { 
+      font: 24px/28px $title-font;
+      margin: 0;
+    }
+  }
+  .field-name-field-fotos {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+
+  .field-name-body {
+    p { margin: 0; }
+  }
+}
+
+.node-galeria.node-teaser {
+  .field-name-title {
+    h2 {
+      font: 24px/28px $title-font;
+      margin: 0;
+    }
+  }
+  .field-name-field-foto {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+}
+
+.node-article.node-teaser {
+  margin: 10px 0 0 0;
+  .field-name-title {
+    h2 { 
+      font: 24px/28px $title-font;
+      margin: 0;
+    }
+  }
+  .field-name-field-image {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+
+  .field-name-body {
+    p { margin: 0; }
   }
 }
