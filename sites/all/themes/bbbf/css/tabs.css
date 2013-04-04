@@ -7,15 +7,6 @@
  * Compare this with default CSS found in the system module's stylesheet (a copy
  * of which is in drupal7-reference.css.)
  */
-@font-face {
-  font-family: 'CubanoRegular';
-  src: url("fonts/cubano-regular-webfont.eot");
-  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("fonts/cubano-regular-webfont.woff") format("woff");
-  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
-  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
-}
-
 /*
  * Basic positioning styles shared by primary and secondary tabs.
  */

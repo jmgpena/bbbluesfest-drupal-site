@@ -12,15 +12,6 @@
  *
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
-@font-face {
-  font-family: 'CubanoRegular';
-  src: url("fonts/cubano-regular-webfont.eot");
-  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("fonts/cubano-regular-webfont.woff") format("woff");
-  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
-  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
-}
-
 /*
  * Center the page.
  */

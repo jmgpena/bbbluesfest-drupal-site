@@ -2,15 +2,6 @@
  * @file
  * Form Styling
  */
-@font-face {
-  font-family: 'CubanoRegular';
-  src: url("fonts/cubano-regular-webfont.eot");
-  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("fonts/cubano-regular-webfont.woff") format("woff");
-  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
-  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
-}
-
 /* line 9, ../sass/forms.scss */
 .form-item {
   /* Wrapper for a form element (or group of form elements) and its label */

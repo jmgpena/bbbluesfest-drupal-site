@@ -116,6 +116,10 @@ body {
 #slideshow {
   background-color: black;
 
+  .view-content {
+    max-width: 1280px;
+  }
+
   span#views_slideshow_controls_text_previous_featured-block {
     a {
       display: block;
@@ -125,6 +129,7 @@ body {
       margin: -23px 0 0;
       background: url(../images/btn-prev-next.png) no-repeat;
       position: absolute;
+      left: 30px;
       top: 50%;
       cursor: pointer;
       text-indent: -999em;
@@ -140,9 +145,22 @@ body {
       background: url(../images/btn-prev-next.png) no-repeat;
       background-position: -25px 0;
       position: absolute;
-      right: 0;
+      right: 30px;
       top: 50%;
       cursor: pointer;
+      text-indent: -999em;
+    }
+  }
+  span#views_slideshow_controls_text_pause_featured-block {
+    a {
+      z-index: 100;
+      display: block;
+      margin: 0 0 0 -220px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 440px;
+      height: 100%;
       text-indent: -999em;
     }
   }

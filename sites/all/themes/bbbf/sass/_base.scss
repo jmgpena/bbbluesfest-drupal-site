@@ -76,16 +76,6 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 $base-font-family: $verdana; // The font family set on the html element.
 $font-body:        $verdana;
 $font-monospace:   $courier;
-
-@font-face {
-  font-family: 'CubanoRegular';
-  src: url('fonts/cubano-regular-webfont.eot');
-  src: url('fonts/cubano-regular-webfont.eot?#iefix') format('embedded-opentype');
-  src: url('fonts/cubano-regular-webfont.woff') format('woff');
-  src: url('fonts/cubano-regular-webfont.ttf') format('truetype');
-  src: url('fonts/cubano-regular-webfont.svg#CubanoRegular') format('svg');
-}
-
 $title-font: 'CubanoRegular', sans-serif;
 
 //

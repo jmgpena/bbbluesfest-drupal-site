@@ -4,15 +4,6 @@
  *
  * Add wireframes to the basic layout elements.
  */
-@font-face {
-  font-family: 'CubanoRegular';
-  src: url("fonts/cubano-regular-webfont.eot");
-  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("fonts/cubano-regular-webfont.woff") format("woff");
-  src: url("fonts/cubano-regular-webfont.ttf") format("truetype");
-  src: url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
-}
-
 /* line 19, ../sass/wireframes.scss */
 .with-wireframes #header,
 .with-wireframes #main,
