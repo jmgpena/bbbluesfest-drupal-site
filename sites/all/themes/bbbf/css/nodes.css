@@ -187,7 +187,7 @@
   font-size: small;
 }
 /* line 153, ../sass/nodes.scss */
-.node-banda.view-mode-full h3.field-label {
+.node-banda.view-mode-full h3.field-label, .node-banda.view-mode-full h2.fielt-item {
   margin: 15px 0 10px 0;
 }
 
