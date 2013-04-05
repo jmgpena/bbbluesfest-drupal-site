@@ -136,7 +136,7 @@ body {
   font: 39px/44px "CubanoRegular", sans-serif;
   left: 17.5%;
   top: 28.5%;
-  text-shadow: #444444 0 2px 2px;
+  text-shadow: #444 0 2px 2px;
   width: 310px;
   color: white;
 }
@@ -450,24 +450,29 @@ span.field-label {
 }
 /* line 402, ../sass/pages.scss */
 #footer .block {
+  color: white;
   float: left;
   width: 306px;
 }
-/* line 405, ../sass/pages.scss */
+/* line 406, ../sass/pages.scss */
 #footer .block h2 {
   font: 36px/38px "CubanoRegular", sans-serif;
+}
+/* line 409, ../sass/pages.scss */
+#footer .block a {
+  color: white;
 }
 
 /*
  * Page bottom
  */
-/* line 415, ../sass/pages.scss */
+/* line 417, ../sass/pages.scss */
 #bottom-wrapper {
   background-color: black;
   color: white;
 }
 
-/* line 420, ../sass/pages.scss */
+/* line 422, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
   width: 988px;
@@ -476,13 +481,13 @@ span.field-label {
   font: 13px/16px Verdana;
   color: darkgray;
 }
-/* line 426, ../sass/pages.scss */
+/* line 428, ../sass/pages.scss */
 .region-bottom a {
   color: white;
   font-weigth: bold;
   text-decoration: none;
 }
-/* line 431, ../sass/pages.scss */
+/* line 433, ../sass/pages.scss */
 .region-bottom p {
   margin: 4px 0 0;
 }
@@ -490,7 +495,7 @@ span.field-label {
 /*
  * Programa do Festival
  */
-/* line 440, ../sass/pages.scss */
+/* line 442, ../sass/pages.scss */
 .node-6.node-page .day, .node-6.node-page .bigday {
   width: 444px;
   float: left;
@@ -499,67 +504,65 @@ span.field-label {
   background-color: #9dc9e2;
   padding: 5px 15px;
 }
-/* line 447, ../sass/pages.scss */
+/* line 449, ../sass/pages.scss */
 .node-6.node-page .day a, .node-6.node-page .bigday a {
   color: inherit;
 }
-/* line 449, ../sass/pages.scss */
+/* line 451, ../sass/pages.scss */
 .node-6.node-page .day a:hover, .node-6.node-page .bigday a:hover {
   color: #dd5e00;
 }
-/* line 450, ../sass/pages.scss */
+/* line 452, ../sass/pages.scss */
 .node-6.node-page .day a:visited, .node-6.node-page .bigday a:visited {
   color: inherit;
 }
-/* line 453, ../sass/pages.scss */
+/* line 455, ../sass/pages.scss */
 .node-6.node-page #day28 {
   clear: none;
 }
-/* line 454, ../sass/pages.scss */
+/* line 456, ../sass/pages.scss */
 .node-6.node-page #day29 {
   float: right;
   clear: none;
 }
-/* line 456, ../sass/pages.scss */
+/* line 458, ../sass/pages.scss */
 .node-6.node-page .bigday .daynumber {
   font: 49px/54px "CubanoRegular", sans-serif;
-  text-shadow: #444444 0 4px 4px;
   color: white;
 }
-/* line 464, ../sass/pages.scss */
+/* line 466, ../sass/pages.scss */
 .node-6.node-page .day .daynumber {
   font: 39px/39px "CubanoRegular", sans-serif;
-  text-shadow: #444444 0 4px 4px;
   color: white;
   float: left;
   margin: 0 10px 20px 0;
 }
-/* line 473, ../sass/pages.scss */
+/* line 475, ../sass/pages.scss */
 .node-6.node-page .black {
   color: black;
 }
-/* line 474, ../sass/pages.scss */
+/* line 476, ../sass/pages.scss */
 .node-6.node-page .white {
   color: white;
 }
-/* line 476, ../sass/pages.scss */
+/* line 478, ../sass/pages.scss */
 .node-6.node-page .bigband {
   font: 34px/36px "CubanoRegular", sans-serif;
   margin: 10px 0 0 0;
 }
-/* line 481, ../sass/pages.scss */
+/* line 483, ../sass/pages.scss */
 .node-6.node-page .band {
   font: 24px/28px "CubanoRegular", sans-serif;
 }
-/* line 485, ../sass/pages.scss */
+/* line 487, ../sass/pages.scss */
 .node-6.node-page .label {
   font: 13px/16px "CubanoRegular", sans-serif;
 }
-/* line 489, ../sass/pages.scss */
+/* line 491, ../sass/pages.scss */
 .node-6.node-page .feat {
   font: 16px/18px "CubanoRegular", sans-serif;
 }
-/* line 493, ../sass/pages.scss */
+/* line 495, ../sass/pages.scss */
 .node-6.node-page a {
   text-decoration: none;
 }

@@ -400,11 +400,13 @@ span.field-label { /* The inline field label used by the Fences module */
   margin: 0 auto;
   padding-top: 20px;
   .block {
+    color: white;
     float: left;
     width: 306px;
     h2 {
       font: 36px/38px $title-font;
     }
+    a { color: white; }
   }
 }
 
@@ -455,7 +457,7 @@ span.field-label { /* The inline field label used by the Fences module */
   .bigday {
     .daynumber {
       font: 49px/54px $title-font;
-      text-shadow: #444 0 4px 4px;
+      //text-shadow: #444 0 4px 4px;
       color: white;
     }
   }
@@ -463,7 +465,7 @@ span.field-label { /* The inline field label used by the Fences module */
   .day {
     .daynumber {
       font: 39px/39px $title-font;
-      text-shadow: #444 0 4px 4px;
+      //text-shadow: #444 0 4px 4px;
       color: white;
       float: left;
       margin: 0 10px 20px 0;

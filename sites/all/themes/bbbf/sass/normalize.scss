@@ -169,12 +169,12 @@ body {
  */
 
 a:link {
-  color: $link;
+  color: inherited;
   text-decoration: underline;
 }
 
 a:visited {
-  color: $link-visited;
+  color: inherited;
 }
 
 a:hover,
