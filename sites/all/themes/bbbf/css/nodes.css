@@ -174,24 +174,28 @@
   text-align: justify;
 }
 /* line 141, ../sass/nodes.scss */
+.node-banda.view-mode-full .field-name-field-fotos {
+  margin-top: 15px;
+}
+/* line 145, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-datalocal {
   font: 26px/30px "CubanoRegular", sans-serif;
   margin: 0 0 30px 0;
 }
-/* line 146, ../sass/nodes.scss */
+/* line 150, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-discografia {
   background-color: #9dc9e2;
 }
-/* line 148, ../sass/nodes.scss */
+/* line 152, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-discografia p {
   font-size: small;
 }
-/* line 153, ../sass/nodes.scss */
-.node-banda.view-mode-full h3.field-label, .node-banda.view-mode-full h2.fielt-item {
+/* line 157, ../sass/nodes.scss */
+.node-banda.view-mode-full h3.field-label, .node-banda.view-mode-full h2.field-item {
   margin: 15px 0 10px 0;
 }
 
-/* line 159, ../sass/nodes.scss */
+/* line 163, ../sass/nodes.scss */
 .node-galeria.view-mode-full .field-name-field-foto {
   float: left;
   margin: 15px 15px 0 0;
