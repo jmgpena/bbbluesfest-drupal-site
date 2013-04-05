@@ -17,6 +17,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 #page {
@@ -195,6 +196,18 @@ body {
     float: left; 
     h2 { font: 36px/38px $title-font; }
   }
+
+  .media-player {
+    font-family: $base-font-family;
+    -moz-box-shadow: none;/*no-important moz*/
+    -webkit-box-shadow: none;/*no-important chrome*/
+  }
+
+  .osmplayer-default {
+    font-family: $base-font-family;
+    -moz-box-shadow: none;/*no-important moz*/
+    -webkit-box-shadow: none;/*no-important chrome*/
+  }
 }
 
 /*
@@ -216,6 +229,7 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   #page-title {
+    display: none;
     font: 36px/38px $title-font;
     border-bottom: 2px double gray;
   }
@@ -249,10 +263,9 @@ body {
           .field-name-node-link {
             a {
               display: inline-block;
-              border: 1px solid #939189;
               padding: 0 9px;
-              color: #f4f2e7;
-              background-color: $panel;
+              color: $bbbf-blue;
+              background-color: black;
               text-decoration: none;
               font-variant: small-caps;
             }

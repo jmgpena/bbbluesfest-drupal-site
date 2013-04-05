@@ -12,7 +12,7 @@
 .form-item textarea.error,
 .form-item select.error {
   /* Highlight the form elements that caused a form submission error */
-  border: 1px solid #cc0000;
+  border: 1px solid #c00;
 }
 /* line 18, ../sass/forms.scss */
 .form-item label {
@@ -137,11 +137,11 @@ form th {
   /* LTR */
   padding-right: 1em;
   /* LTR */
-  border-bottom: 3px solid #cccccc;
+  border-bottom: 3px solid #ccc;
 }
 /* line 122, ../sass/forms.scss */
 form tbody {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
 }
 /* line 126, ../sass/forms.scss */
 form tr.even {

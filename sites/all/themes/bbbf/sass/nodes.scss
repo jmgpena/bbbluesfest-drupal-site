@@ -24,6 +24,9 @@
   }
 
   .content { /* Node's content wrapper */
+    img {
+      margin: 0 10px 10px 0;
+    }
   }
 
   ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
@@ -43,7 +46,9 @@
 .node-teaser { /* A node displayed as teaser */
   margin: 10px 0 0 0;
   a {
+    color: black;
     text-decoration: none;
+    &:hover { color: $orange; }
     &:visited { color: black; }
   }
 }
