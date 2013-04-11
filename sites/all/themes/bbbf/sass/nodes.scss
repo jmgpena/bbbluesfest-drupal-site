@@ -126,6 +126,7 @@
 }
 
 .node-banda.view-mode-full {
+  padding-bottom: 15px;
   .group-left {
     width: 306px;
   }
@@ -139,18 +140,34 @@
   }
 
   .field-name-field-fotos {
-    margin-top: 15px;
+  }
+
+  .field-name-title {
+    h2 {
+      font: 26px/30px $title-font;
+      margin: 0 0 30px 0;
+    }
   }
 
   .field-name-field-datalocal {
-    font: 26px/30px $title-font;
+    font: 20px/24px $title-font;
     margin: 0 0 30px 0;
   }
 
   .field-name-field-discografia {
-    background-color: $dark-blue;
+
     p {
       font-size: small;
+    }
+  }
+
+  .field-name-field-discos,.field-name-field-composicao {
+    background-color: $dark-blue;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 5px;
     }
   }
   
