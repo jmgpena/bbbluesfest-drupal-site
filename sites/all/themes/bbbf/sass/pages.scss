@@ -131,8 +131,10 @@ body {
     width: 310px;
     color: white;
     a {
+      display: block;
       color: white;
       text-decoration: none;
+      z-index: 200;
     }
   }
 
@@ -171,7 +173,7 @@ body {
     a {
       z-index: 100;
       display: block;
-      margin: 0 0 0 -220px;
+      margin: 0 0 0 -160px;
       position: absolute;
       left: 50%;
       top: 0;
