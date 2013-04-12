@@ -56,10 +56,23 @@ body {
   .region-topbar {
     width: 988px;
     margin: 0 auto;
+    a {
+      color: white;
+      text-decoration: none;
+      &:visited {
+        color: white;
+      }
+      &:hover {
+        color: $orange;
+      }
+    }
     p { margin: 0; }
     .block {
       float: left;
       padding: 0 15px;
+      &.last {
+        float: right;
+      }
     }
   }
 }
@@ -417,7 +430,7 @@ span.field-label { /* The inline field label used by the Fences module */
   .block {
     color: white;
     float: left;
-    width: 306px;
+    width: 314px;
     h2 {
       font: 36px/38px $title-font;
     }

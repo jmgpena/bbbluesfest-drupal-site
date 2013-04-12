@@ -72,7 +72,7 @@
   margin-right: 0;
 }
 /* line 63, ../sass/views-styles.scss */
-.view-bilheteira input#edit-submit {
+.view-bilheteira input.form-submit {
   padding: 5px;
   background: black;
   color: #e9f5fc;
