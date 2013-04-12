@@ -87,7 +87,7 @@ function commerce_comprafacil_submit_form($payment_method, $pane_values, $checko
 function commerce_comprafacil_submit_form_submit($payment_method, $pane_form, $pane_values, $order, $charge) {
   $order->data['commerce_comprafacil'] = $pane_values;
 
-  commerce_comprafacil_transaction($payment_method, $order, $charge, $pane_values['name']);
+  commerce_comprafacil_transaction($payment_method, $order, $charge);
 }
 
 /**
@@ -102,7 +102,7 @@ function commerce_comprafacil_submit_form_submit($payment_method, $pane_form, $p
  * @param $name
  *   The name entered on the submission form.
  */
-function commerce_comprafacil_transaction($payment_method, $order, $charge, $name) {
+function commerce_comprafacil_transaction($payment_method, $order, $charge) {
   $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
 
   // Prepare the billing address for use in the request.
@@ -164,14 +164,25 @@ function commerce_comprafacil_transaction($payment_method, $order, $charge, $nam
 */
 function commerce_comprafacil_getreference($parameters,$wsURL) {
   try {
+
+      watchdog('debug',$wsURL);
+
+    watchdog('debug',str_replace('    ', '&nbsp;&nbsp;&nbsp;&nbsp;', nl2br(htmlentities(print_r($parameters, TRUE)))));
+
     $client = new SoapClient($wsURL);
     $res = $client->getReferenceMB($parameters);
+
+    var_dump($res);
+    
+    watchdog('debug',str_replace('    ', '&nbsp;&nbsp;&nbsp;&nbsp;', nl2br(htmlentities(print_r($res, TRUE)))));
 
     if ($res->getReferenceMBResult) {
       $ref['entity'] = $res->entity;
       $ref['value'] = number_format($res->amountOut, 2);
       $ref['reference'] = $res->reference;
       $error = "";
+
+
 
       return $ref;
     }
