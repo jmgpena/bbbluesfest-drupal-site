@@ -110,9 +110,10 @@ function commerce_comprafacil_transaction($payment_method, $order, $charge, $nam
 
   $payment_method['settings'] += commerce_comprafacil_default_settings();
 
+  $wsURL = $payment_method['settings']['commerce_comprafacil_wsurl'];
   //Data needed for getting the MB reference
   $ref_data = array(
-    'origin' => 'drupal-cabb-mm',
+    'origin' => 'drupal-bbbf',
     'username' => $payment_method['settings']['commerce_comprafacil_username'],
     'password' => $payment_method['settings']['commerce_comprafacil_password'],
     'amount' => commerce_currency_amount_to_decimal($charge['amount'], $charge['currency_code']),
@@ -132,7 +133,7 @@ function commerce_comprafacil_transaction($payment_method, $order, $charge, $nam
   );
 
   //Response from the SOAP server
-  $ref = commerce_comprafacil_getreference($ref_data);
+  $ref = commerce_comprafacil_getreference($ref_data,$wsURL);
 
   $transaction = commerce_payment_transaction_new('commerce_comprafacil', $order->order_id);
   $transaction->instance_id = $payment_method['instance_id'];
@@ -161,10 +162,8 @@ function commerce_comprafacil_transaction($payment_method, $order, $charge, $nam
 /**
 * Get the reference from Compra Fácil SOAP server
 */
-function commerce_comprafacil_getreference($parameters) {
+function commerce_comprafacil_getreference($parameters,$wsURL) {
   try {
-    $wsURL = $payment_method['settings']['commerce_comprafacil_wsurl'];
-//'https://hm.comprafacil.pt/SIBSClick2/webservice/CompraFacilWS.asmx?WSDL';
     $client = new SoapClient($wsURL);
     $res = $client->getReferenceMB($parameters);
 
