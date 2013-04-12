@@ -1,0 +1,191 @@
+<?php
+
+/**
+ * @file
+ * Provides a payment method using Compra Fácil / Hipay platform.
+ */
+
+
+/**
+ * Implements hook_commerce_payment_method_info().
+ */
+function commerce_comprafacil_commerce_payment_method_info() {
+  $payment_methods = array();
+  $payment_methods['commerce_comprafacil'] = array(
+    'title' => t('Multibanco'),
+    'description' => t('Multibanco (CompraFácil) payment gateway integration.'),
+  );
+
+  return $payment_methods;
+}
+
+/**
+* Returns the default settings for the Compra Fácil payment method.
+*/
+function commerce_comprafacil_default_settings() {
+  $default_currency = variable_get('commerce_default_currency', 'EUR');
+
+  return array(
+    'commerce_comprafacil_username' => '',
+    'commerce_comprafacil_password' => '',
+    'commerce_comprafacil_wsurl' => variable_get('commerce_comprafacil_wsurl',
+    'https://hm.comprafacil.pt/SIBSClick2Teste/webservice/CompraFacilWS.asmx?WSDL'),
+  );
+}
+
+/**
+* Payment method callback: settings form.
+*/
+function commerce_comprafacil_settings_form($settings = NULL) {
+  $settings += commerce_comprafacil_default_settings();
+
+  $form = array();
+
+  $form['commerce_comprafacil_username'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Username'),
+    '#default_value' => $settings['commerce_comprafacil_username'],
+  	'#required' => TRUE,
+  );
+  $form['commerce_comprafacil_password'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Password'),
+    '#default_value' => $settings['commerce_comprafacil_password'],
+  	'#required' => TRUE,
+  );
+  $form['commerce_comprafacil_wsurl'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Web service URL'),
+      '#default_value' => $settings['commerce_comprafacil_wsurl'],
+    	'#required' => TRUE,
+  );
+
+  return $form;
+}
+
+/**
+ * Payment method callback: submit form.
+ */
+function commerce_comprafacil_submit_form($payment_method, $pane_values, $checkout_pane, $order) {
+  $form = array();
+
+  // Merge in values from the order.
+  if (!empty($order->data['commerce_comprafacil'])) {
+    $pane_values += $order->data['commerce_comprafacil'];
+  }
+
+  $form['payment_description'] = array(
+    '#markup' => t('The Multibanco reference to make the payment will be show in the next step.'),
+  );
+
+  return $form;
+}
+
+/**
+ * Payment method callback: submit form submission.
+ */
+function commerce_comprafacil_submit_form_submit($payment_method, $pane_form, $pane_values, $order, $charge) {
+  $order->data['commerce_comprafacil'] = $pane_values;
+
+  commerce_comprafacil_transaction($payment_method, $order, $charge, $pane_values['name']);
+}
+
+/**
+ * Creates an example payment transaction for the specified charge amount.
+ *
+ * @param $payment_method
+ *   The payment method instance object used to charge this payment.
+ * @param $order
+ *   The order object the payment applies to.
+ * @param $charge
+ *   An array indicating the amount and currency code to charge.
+ * @param $name
+ *   The name entered on the submission form.
+ */
+function commerce_comprafacil_transaction($payment_method, $order, $charge, $name) {
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
+
+  // Prepare the billing address for use in the request.
+  $billing_address = $order_wrapper->commerce_customer_billing->commerce_customer_address->value();
+
+  $payment_method['settings'] += commerce_comprafacil_default_settings();
+
+  //Data needed for getting the MB reference
+  $ref_data = array(
+    'origin' => 'drupal-cabb-mm',
+    'username' => 'hp6728061', //$payment_method['settings']['commerce_comprafacil_username'],
+    'password' => 'cabb2012', //$payment_method['settings']['commerce_comprafacil_password'],
+    'amount' => commerce_currency_amount_to_decimal($charge['amount'], $charge['currency_code']),
+    'additionalInfo' =>'',
+    'name' => $billing_address['name_line'],
+    'address' => $billing_address['thoroughfare'],
+    'postCode' => $billing_address['postal_code'],
+    'city' => $billing_address['locality'],
+    'NIC' =>'',
+    'externalReference' => $order->order_id,
+    'contactPhone' => ' ',
+    //'country' => $billing_address['country'],
+    'email' => $order->mail,
+    'IDUserBackoffice' => -1,
+    'timeLimitDays' => 3,
+    'sendEmailBuyer' => false,
+  );
+
+  //Response from the SOAP server
+  $ref = commerce_comprafacil_getreference($ref_data);
+
+  $transaction = commerce_payment_transaction_new('commerce_comprafacil', $order->order_id);
+  $transaction->instance_id = $payment_method['instance_id'];
+  $transaction->amount = $charge['amount'];
+  $transaction->currency_code = $charge['currency_code'];
+  $transaction->status = COMMERCE_PAYMENT_STATUS_SUCCESS;
+  $transaction->message = 'Name: @name | Entity: @entity | Value: @value | MB Reference: @reference';
+  $transaction->message_variables = array('@name' => $billing_address['name_line'],
+                                          '@entity' => $ref['entity'],
+                                          '@value' => $ref['value'],
+  										  '@reference' => $ref['reference'],
+                                          );
+
+  commerce_payment_transaction_save($transaction);
+
+  $data = array(
+      'order_id' => $order->order_id,
+      'entity' => $ref['entity'],
+      'value' => $ref['value'],
+      'reference' => $ref['reference'],
+  );
+
+  drupal_write_record('commerce_comprafacil', $data);
+}
+
+/**
+* Get the reference from Compra Fácil SOAP server
+*/
+function commerce_comprafacil_getreference($parameters) {
+  try {
+
+    $wsURL = 'https://hm.comprafacil.pt/SIBSClick2/webservice/CompraFacilWS.asmx?WSDL';
+    $client = new SoapClient($wsURL);
+    $res = $client->getReferenceMB($parameters);
+
+    if ($res->getReferenceMBResult) {
+      $ref['entity'] = $res->entity;
+      $ref['value'] = number_format($res->amountOut, 2);
+      $ref['reference'] = $res->reference;
+      $error = "";
+
+      return $ref;
+    }
+    else {
+      $error = $res->error;
+      drupal_set_message($error,'warning');
+      return FALSE;
+    }
+
+  }
+  catch (Exception $e) {
+    $error = $e->getMessage();
+    return FALSE;
+  }
+
+}
