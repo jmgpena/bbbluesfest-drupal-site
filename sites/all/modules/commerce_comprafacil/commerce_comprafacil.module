@@ -163,7 +163,7 @@ function commerce_comprafacil_transaction($payment_method, $order, $charge, $nam
 */
 function commerce_comprafacil_getreference($parameters) {
   try {
-    $wsURL = $payment_method['settings']['commerce_comprafacil_wsurl'],
+    $wsURL = $payment_method['settings']['commerce_comprafacil_wsurl'];
 //'https://hm.comprafacil.pt/SIBSClick2/webservice/CompraFacilWS.asmx?WSDL';
     $client = new SoapClient($wsURL);
     $res = $client->getReferenceMB($parameters);
