@@ -44,3 +44,26 @@
   }
 }
 
+.view-bilheteira {
+  .views-row {
+    background: $dark-blue;
+    float: left;
+    padding: 15px;
+    margin: 0 15px 15px 0;
+    width: 285px;
+    height: 200px;
+    .views-field-title {
+      font: 22px/24px $title-font;
+    }
+  }
+  .views-row-last {
+    margin-right: 0;
+  }
+
+  input#edit-submit {
+    padding: 5px;
+    background: black;
+    color: $light-blue;
+    border: none;
+  }
+}

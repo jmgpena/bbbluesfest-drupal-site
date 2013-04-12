@@ -53,3 +53,28 @@
   -o-border-radius: 0 0 7px 7px;
   border-radius: 0 0 7px 7px;
 }
+
+/* line 48, ../sass/views-styles.scss */
+.view-bilheteira .views-row {
+  background: #9dc9e2;
+  float: left;
+  padding: 15px;
+  margin: 0 15px 15px 0;
+  width: 285px;
+  height: 200px;
+}
+/* line 55, ../sass/views-styles.scss */
+.view-bilheteira .views-row .views-field-title {
+  font: 22px/24px "CubanoRegular", sans-serif;
+}
+/* line 59, ../sass/views-styles.scss */
+.view-bilheteira .views-row-last {
+  margin-right: 0;
+}
+/* line 63, ../sass/views-styles.scss */
+.view-bilheteira input#edit-submit {
+  padding: 5px;
+  background: black;
+  color: #e9f5fc;
+  border: none;
+}
