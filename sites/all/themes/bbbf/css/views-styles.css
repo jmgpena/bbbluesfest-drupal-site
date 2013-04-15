@@ -198,3 +198,40 @@ form#commerce-checkout-form-checkout input.form-submit {
   border: none;
   margin-right: 10px;
 }
+
+/* line 182, ../sass/views-styles.scss */
+form#commerce-checkout-form-review fieldset {
+  border: none;
+  background-color: #9dc9e2;
+}
+/* line 185, ../sass/views-styles.scss */
+form#commerce-checkout-form-review fieldset legend {
+  position: relative;
+  top: 15px;
+  font: 16px/18px "CubanoRegular", sans-serif;
+  margin: 0 0 15px 0;
+}
+/* line 194, ../sass/views-styles.scss */
+form#commerce-checkout-form-review table.checkout-review tr.pane-title, form#commerce-checkout-form-review table.checkout-review tr.component-type-commerce-price-formatted-amount {
+  background-color: #9dc9e2;
+}
+/* line 197, ../sass/views-styles.scss */
+form#commerce-checkout-form-review table.checkout-review tr.pane-data {
+  background-color: #e9f5fc;
+}
+/* line 200, ../sass/views-styles.scss */
+form#commerce-checkout-form-review table.checkout-review td.views-field {
+  background-color: #9dc9e2;
+}
+/* line 204, ../sass/views-styles.scss */
+form#commerce-checkout-form-review input.form-submit {
+  padding: 5px;
+  background: black;
+  color: #e9f5fc;
+  border: none;
+  margin-right: 10px;
+}
+/* line 212, ../sass/views-styles.scss */
+form#commerce-checkout-form-review span.button-operator {
+  display: none;
+}

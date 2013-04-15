@@ -176,3 +176,40 @@ form#commerce-checkout-form-checkout {
     margin-right: 10px;
   }
 }
+
+form#commerce-checkout-form-review {
+
+  fieldset {
+    border: none;
+    background-color: $dark-blue;
+    legend {
+      position: relative;
+      top: 15px;
+      font: 16px/18px $title-font;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  table.checkout-review {
+    tr.pane-title,tr.component-type-commerce-price-formatted-amount {
+      background-color: $dark-blue;
+    }
+    tr.pane-data {
+      background-color: $light-blue;
+    }
+    td.views-field {
+      background-color: $dark-blue;
+    }
+  }
+  input.form-submit {
+    padding: 5px;
+    background: black;
+    color: $light-blue;
+    border: none;
+    margin-right: 10px;
+  }
+
+  span.button-operator {
+    display: none;
+  }
+}

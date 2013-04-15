@@ -431,11 +431,12 @@ span.field-label { /* The inline field label used by the Fences module */
 #footer {
   width: 988px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 20px 0 0 0;
   .block {
+    padding: 0 5px;
     color: white;
     float: left;
-    width: 314px;
+    width: 304px;
     h2 {
       font: 36px/38px $title-font;
     }
