@@ -45,19 +45,127 @@
 }
 
 .view-bilheteira {
+  .view-content {
+    overflow: auto;
+    width: 100%;
+  }
   .views-row {
     background: $dark-blue;
     float: left;
     padding: 15px;
-    margin: 0 15px 15px 0;
-    width: 285px;
+    margin: 15px 15px 15px 0;
+    width: 260px;
     height: 200px;
     .views-field-title {
-      font: 22px/24px $title-font;
+      font: 21px/22px $title-font;
+    }
+    .field-name-commerce-price {
+      margin: 5px 0 0 0;
+      font: 18px/22px $title-font;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    ul.field-name-field-eventos {
+      color: white;
+      font: 16px/18px $title-font;
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0;
+      min-height: 100px;
+      li {
+        margin-bottom: 4px;
+      }
     }
   }
   .views-row-last {
+    width: 330px;
     margin-right: 0;
+  }
+
+  .views-field-add-to-cart-form {
+    input.form-submit {
+      padding: 5px;
+      background: black;
+      color: $light-blue;
+      border: none;
+    }
+
+    .form-item-quantity {
+      margin: 0 10px 0 0;
+      float: left;
+      label { display: none; }
+      input {
+        text-align: right;
+        padding: 3px;
+      }
+    }
+
+  }
+}
+
+#block-commerce-cart-cart {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  table.views-table {
+    width: 100%;
+    font-weight: bold;
+    tr {
+      background-color: $dark-blue;
+      border-bottom: 1px solid black;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  span.line-item-total-raw {
+    font-weight: bold;
+  }
+
+  ul.links {
+    a {
+      display: inline-block;
+      color: $light-blue;
+      background-color: black;
+      text-decoration: none;
+      padding: 4px;
+    }
+  }
+}
+
+form#commerce-checkout-form-checkout {
+  fieldset {
+    border: none;
+    background-color: $dark-blue;
+    legend {
+      position: relative;
+      top: 15px;
+      font: 16px/18px $title-font;
+    }
+  }
+  table.views-table {
+    thead > tr {
+      background-color: none;
+    }
+    width: 100%;
+    font-weight: bold;
+    tbody > tr {
+      background-color: $light-blue;
+      border-bottom: 1px solid black;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  tr.component-type-commerce-price-formatted-amount {
+    background-color: $light-blue;
+  }
+
+  span.button-operator {
+    display: none;
   }
 
   input.form-submit {
@@ -65,5 +173,6 @@
     background: black;
     color: $light-blue;
     border: none;
+    margin-right: 10px;
   }
 }

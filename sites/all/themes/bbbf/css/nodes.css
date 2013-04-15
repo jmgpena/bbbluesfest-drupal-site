@@ -192,14 +192,14 @@
   font-size: small;
 }
 /* line 164, ../sass/nodes.scss */
-.node-banda.view-mode-full .field-name-field-discos, .node-banda.view-mode-full .field-name-field-composicao {
+.node-banda.view-mode-full .field-name-field-discos, .node-banda.view-mode-full .field-name-field-composicao, .node-banda.view-mode-full .field-name-field-links {
   background-color: #9dc9e2;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 /* line 169, ../sass/nodes.scss */
-.node-banda.view-mode-full .field-name-field-discos li, .node-banda.view-mode-full .field-name-field-composicao li {
+.node-banda.view-mode-full .field-name-field-discos li, .node-banda.view-mode-full .field-name-field-composicao li, .node-banda.view-mode-full .field-name-field-links li {
   margin-bottom: 5px;
 }
 /* line 174, ../sass/nodes.scss */
