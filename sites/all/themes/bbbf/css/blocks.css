@@ -242,14 +242,24 @@
   float: left;
 }
 /* line 183, ../sass/blocks.scss */
-#block-simplenews-1 form.simplenews-subscribe .form-item-mail input#edit-mail {
+#block-simplenews-1 form.simplenews-subscribe .form-item-mail input.form-text {
   float: left;
   margin: 0 10px;
 }
 /* line 188, ../sass/blocks.scss */
-#block-simplenews-1 form.simplenews-subscribe input#edit-submit {
+#block-simplenews-1 form.simplenews-subscribe input.form-submit {
   font: inherit;
   padding: 2px 8px;
   border: none;
   background-color: light-blue;
+}
+
+/* line 198, ../sass/blocks.scss */
+form#simplenews-confirm-add-form input#edit-submit, form#simplenews-confirm-add-form a {
+  padding: 5px;
+  background: black;
+  color: #e9f5fc;
+  border: none;
+  margin-right: 10px;
+  text-decoration: none;
 }
