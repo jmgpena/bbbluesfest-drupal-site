@@ -550,12 +550,12 @@ span.field-label {
   color: inherit;
 }
 /* line 485, ../sass/pages.scss */
-.node-6.node-page .day a:hover, .node-6.node-page .bigday a:hover {
-  color: #dd5e00;
-}
-/* line 486, ../sass/pages.scss */
 .node-6.node-page .day a:visited, .node-6.node-page .bigday a:visited {
   color: inherit;
+}
+/* line 486, ../sass/pages.scss */
+.node-6.node-page .day a:hover, .node-6.node-page .bigday a:hover {
+  color: #dd5e00;
 }
 /* line 489, ../sass/pages.scss */
 .node-6.node-page #day28 {
