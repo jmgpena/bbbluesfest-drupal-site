@@ -161,4 +161,35 @@
 }
 
 #block-block-5 {
+  
+}
+
+#block-simplenews-1 {
+  width: 490px;
+  h2 {
+    font: inherit;
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+  form.simplenews-subscribe {
+    .form-item-mail {
+      margin: 0;
+      float: left;
+      label {
+        font: inherit;
+        float: left;
+      }
+      input#edit-mail {
+        float: left;
+        margin: 0 10px;
+      }
+    }
+    input#edit-submit {
+      font: inherit;
+      padding: 2px 8px;
+      border: none;
+      background-color: light-blue;
+    }
+  }
 }
