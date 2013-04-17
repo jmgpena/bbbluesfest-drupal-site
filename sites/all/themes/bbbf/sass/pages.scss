@@ -530,3 +530,21 @@ span.field-label { /* The inline field label used by the Fences module */
     text-decoration: none;
   }
 }
+
+/* caixas nas paginas de conteudo */
+div.box {
+  width: 444px;
+  float: left;
+  margin: 10px 0;
+  background-color: $dark-blue;
+  padding: 15px 15px;
+  margin: 15px 15px 15px 0;
+  font: 22px/24px $title-font;
+  color: white;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:visited { color: inherit; }
+    &:hover { color: $orange; }
+  }
+}

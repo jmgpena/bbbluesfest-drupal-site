@@ -607,3 +607,29 @@ span.field-label {
 .node-6.node-page a {
   text-decoration: none;
 }
+
+/* caixas nas paginas de conteudo */
+/* line 535, ../sass/pages.scss */
+div.box {
+  width: 444px;
+  float: left;
+  margin: 10px 0;
+  background-color: #9dc9e2;
+  padding: 15px 15px;
+  margin: 15px 15px 15px 0;
+  font: 22px/24px "CubanoRegular", sans-serif;
+  color: white;
+}
+/* line 544, ../sass/pages.scss */
+div.box a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 547, ../sass/pages.scss */
+div.box a:visited {
+  color: inherit;
+}
+/* line 548, ../sass/pages.scss */
+div.box a:hover {
+  color: #dd5e00;
+}
