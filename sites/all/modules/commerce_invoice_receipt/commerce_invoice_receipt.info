@@ -1,0 +1,15 @@
+name = "Invoice Receipt"
+description = "Provides a printable invoice receipt along with HTML mailing rules."
+package = "Commerce (contrib)"
+dependencies[] = commerce
+dependencies[] = commerce_order
+dependencies[] = emogrifier
+core = 7.x
+
+files[] = commerce_invoice_receipt.admin.inc
+; Information added by drupal.org packaging script on 2012-12-15
+version = "7.x-1.0"
+core = "7.x"
+project = "commerce_invoice_receipt"
+datestamp = "1355593302"
+
