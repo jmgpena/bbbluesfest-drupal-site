@@ -214,39 +214,47 @@
 #block-views-videos-block {
   height: 306px;
 }
+/* line 156, ../sass/blocks.scss */
+#block-views-videos-block .views-field-title {
+  color: white;
+  z-index: 100;
+  position: relative;
+  top: -300px;
+  left: 15px;
+}
 
-/* line 158, ../sass/blocks.scss */
+/* line 166, ../sass/blocks.scss */
 #block-block-4 span.bb {
   margin-left: 10px;
 }
 
-/* line 167, ../sass/blocks.scss */
+/* line 175, ../sass/blocks.scss */
 #block-simplenews-1 {
   width: 490px;
 }
-/* line 169, ../sass/blocks.scss */
+/* line 177, ../sass/blocks.scss */
 #block-simplenews-1 h2 {
   font: inherit;
   display: block;
   float: left;
   margin-right: 10px;
 }
-/* line 176, ../sass/blocks.scss */
+/* line 184, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe .form-item-mail {
   margin: 0;
   float: left;
 }
-/* line 179, ../sass/blocks.scss */
+/* line 187, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe .form-item-mail label {
   font: inherit;
   float: left;
 }
-/* line 183, ../sass/blocks.scss */
+/* line 191, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe .form-item-mail input.form-text {
   float: left;
   margin: 0 10px;
 }
-/* line 188, ../sass/blocks.scss */
+/* line 196, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe input.form-submit {
   font: inherit;
   padding: 2px 8px;
@@ -254,7 +262,7 @@
   background-color: light-blue;
 }
 
-/* line 198, ../sass/blocks.scss */
+/* line 206, ../sass/blocks.scss */
 form#simplenews-confirm-add-form input#edit-submit, form#simplenews-confirm-add-form a {
   padding: 5px;
   background: black;

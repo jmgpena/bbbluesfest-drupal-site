@@ -156,8 +156,8 @@ body {
 #slideshow .views-field-title {
   position: absolute;
   font: 39px/44px "CubanoRegular", sans-serif;
-  left: 11.5%;
-  top: 7.5%;
+  left: 12.5%;
+  bottom: 90px;
   text-shadow: #444 0 2px 2px;
   color: white;
 }
@@ -172,8 +172,8 @@ body {
 #slideshow .field-name-field-datalocal {
   position: absolute;
   font: 24px/28px "CubanoRegular", sans-serif;
-  left: 11.5%;
-  top: 20.5%;
+  left: 12.5%;
+  bottom: 45px;
   text-shadow: #444 0 2px 2px;
   color: #dd5e00;
 }
