@@ -143,10 +143,10 @@ body {
   .views-field-title {
     position: absolute;
     font: 39px/44px $title-font;
-    left: 17.5%;
-    top: 28.5%;
+    left: 11.5%;
+    top: 7.5%;
     text-shadow: #444 0 2px 2px;
-    width: 310px;
+    //width: 310px;
     color: white;
     a {
       display: block;
@@ -154,6 +154,16 @@ body {
       text-decoration: none;
       z-index: 200;
     }
+  }
+
+  .field-name-field-datalocal {
+    position: absolute;
+    font: 24px/28px $title-font;
+    left: 11.5%;
+    top: 20.5%;
+    text-shadow: #444 0 2px 2px;
+    //width: 310px;
+    color: $orange;
   }
 
   span#views_slideshow_controls_text_previous_featured-block {
