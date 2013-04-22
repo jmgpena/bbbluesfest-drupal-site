@@ -1,7 +1,7 @@
 <?php
 $aliases['bbbf'] = array (
-    'uri' => 'bbbf.jmgpena.net',
-    'root' => '/home/jmgpena/bbbf.jmgpena.net',
+    'uri' => 'vps.jmgpena.net',
+    'root' => '/home/jmgpena/bbbluesfest.com.pt',
     'remote-host' => 'vps.jmgpena.net',
     'remote-user' => 'jmgpena',
     'path-aliases' => array (
