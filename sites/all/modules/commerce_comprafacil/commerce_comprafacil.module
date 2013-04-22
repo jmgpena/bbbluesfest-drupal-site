@@ -118,7 +118,7 @@ function commerce_comprafacil_transaction($payment_method, $order, $charge) {
     'password' => $payment_method['settings']['commerce_comprafacil_password'],
     'amount' => commerce_currency_amount_to_decimal($charge['amount'], $charge['currency_code']),
     'additionalInfo' =>'',
-    'name' => $billing_address['name_line'],
+    'name' => $order_wrapper->commerce_customer_billing->field_nome->value(),
     'address' => $billing_address['thoroughfare'],
     'postCode' => $billing_address['postal_code'],
     'city' => $billing_address['locality'],
