@@ -238,6 +238,18 @@ body {
     -moz-box-shadow: none;/*no-important moz*/
     -webkit-box-shadow: none;/*no-important chrome*/
   }
+
+  .audiojs-default {
+    .audiojs {
+      width: 306px;
+        .scrubber {
+          width: 126px;
+        }
+    }
+    ol.audiojs-playlist {
+      width: 306px;
+    }
+  }
 }
 
 /*
