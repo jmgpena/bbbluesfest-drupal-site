@@ -177,48 +177,52 @@
   margin: 0 0 10px 0;
   text-align: justify;
 }
-/* line 146, ../sass/nodes.scss */
+/* line 145, ../sass/nodes.scss */
+.node-banda.view-mode-full #mediafront_videos {
+  box-shadow: none;
+}
+/* line 150, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-title h2 {
   font: 26px/30px "CubanoRegular", sans-serif;
   margin: 0 0 30px 0;
 }
-/* line 152, ../sass/nodes.scss */
+/* line 156, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-datalocal {
   font: 20px/24px "CubanoRegular", sans-serif;
   margin: 0 0 30px 0;
 }
-/* line 159, ../sass/nodes.scss */
+/* line 163, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-discografia p {
   font-size: small;
 }
-/* line 164, ../sass/nodes.scss */
+/* line 168, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-discos, .node-banda.view-mode-full .field-name-field-composicao, .node-banda.view-mode-full .field-name-field-links {
   background-color: #9dc9e2;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-/* line 169, ../sass/nodes.scss */
+/* line 173, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-discos li, .node-banda.view-mode-full .field-name-field-composicao li, .node-banda.view-mode-full .field-name-field-links li {
   margin-bottom: 5px;
 }
-/* line 174, ../sass/nodes.scss */
+/* line 178, ../sass/nodes.scss */
 .node-banda.view-mode-full h3.field-label, .node-banda.view-mode-full h2.field-item {
   margin: 15px 0 10px 0;
 }
 
-/* line 180, ../sass/nodes.scss */
+/* line 184, ../sass/nodes.scss */
 .node-galeria.view-mode-full .field-name-field-foto {
   float: left;
   margin: 15px 15px 0 0;
 }
 
-/* line 186, ../sass/nodes.scss */
+/* line 190, ../sass/nodes.scss */
 .node-article.view-mode-full {
   /* Article content node */
   padding-bottom: 15px;
 }
-/* line 188, ../sass/nodes.scss */
+/* line 192, ../sass/nodes.scss */
 .node-article.view-mode-full .field-name-field-image {
   float: left;
   margin: 0px 15px 0 0;
