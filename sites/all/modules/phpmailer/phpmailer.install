@@ -32,7 +32,7 @@ function phpmailer_requirements($phase) {
         'value' => $t('Missing'),
         'severity' => REQUIREMENT_ERROR,
         'description' => $t('Please download <a href="@url">PHPMailer for PHP5/6</a>, extract the archive and copy the contents to the following location:<br /><code>@path</code>. Make sure the main file, class.phpmailer.php, is located at<br /><code>@class</code>.', array(
-          '@url' => 'http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/',
+          '@url' => 'https://github.com/PHPMailer/PHPMailer/tags',
           '@path' => $path,
           '@class' => $path . '/class.phpmailer.php',
         )),

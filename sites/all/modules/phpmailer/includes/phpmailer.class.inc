@@ -147,13 +147,19 @@ class DrupalPHPMailer extends PHPMailer implements MailSystemInterface {
   }
 
   /**
-   * Destructor.
+   * Overrides PHPMailer::__destruct().
    */
   public function __destruct() {
-    // Be nice and close the connection when using SMTP keep-alive.
-    if ($this->SMTPKeepAlive) {
-      $this->SmtpClose();
+    // Disable debug output if SMTP keep-alive is enabled.
+    // PHP is most likely shutting down altogether (this class is instantiated
+    // as a static singleton). Since logging facilities (e.g., database
+    // connection) quite potentially have been shut down already, simply turn
+    // off SMTP debugging. Without this override, debug output would be printed
+    // on the screen and CLI output.
+    if ($this->SMTPKeepAlive && isset($this->smtp->do_debug)) {
+      $this->smtp->do_debug = 0;
     }
+    parent::__destruct();
   }
 
   /**
@@ -162,47 +168,32 @@ class DrupalPHPMailer extends PHPMailer implements MailSystemInterface {
    * Note: messages should not end with a dot.
    */
   public function SetLanguage($langcode = 'en', $lang_path = 'language/') {
+    // Retrieve English defaults to ensure all message keys are set.
+    parent::SetLanguage('en');
+
+    // Overload with Drupal translations.
     $this->language = array(
-      'provide_address'     => t('You must provide at least one recipient e-mail address'),
-      'encoding'            => t('Unknown encoding: '),
-      'file_open'           => t('Could not open file: '),
-      'signing'             => t('Signing error: '),
-      'empty_message'       => t('Message body empty'),
-      'tls'                 => t('SMTP error: STARTTLS not accepted from server'),
-      'authenticate'        => t('SMTP error: could not authenticate'),
-      'smtp_connect_failed' => t('SMTP error: could not connect to SMTP host'),
-      'connect_host'        => t('SMTP error: could not connect to SMTP host'),
-      'from_failed'         => t('The following sender address failed: '), // non-admin
-      'recipients_failed'   => t('The following recipient addresses failed: '), // non-admin
-      'data_not_accepted'   => t('SMTP error: data not accepted'),
+      'authenticate'        => t('SMTP error: Could not authenticate.'),
+      'connect_host'        => t('SMTP error: Could not connect to host.'),
+      'data_not_accepted'   => t('SMTP error: Data not accepted.'),
+      'smtp_connect_failed' => t('SMTP error: Could not connect to SMTP host.'),
       'smtp_error'          => t('SMTP server error: '),
 
-      // Unused messages.
-      //'execute'           => t('Could not execute: '),
-      //'instantiate'       => t('Could not instantiate mail() function.'),
-
       // Messages used during email generation.
-      'file_access'         => t('Could not access file: '),
-      'invalid_address'     => t('Invalid address'),
+      'empty_message'       => t('Message body empty'),
+      'encoding'            => t('Unknown encoding: '),
       'variable_set'        => t('Cannot set or reset variable: '),
-    );
-    return TRUE;
-  }
 
-  /**
-   * Assemble the message header.
-   *
-   * PHPMailer always sets Return-Path to Sender, we want more flexibility.
-   */
-  public function CreateHeader() {
-    $old_sender = $this->Sender;
-    if ($this->ReturnPath != '') {
-      $this->Sender = $this->ReturnPath;
-    }
-    $result = parent::CreateHeader();
-    // Restore sender for use in MAIL FROM command.
-    $this->Sender = $old_sender;
-    return $result;
+      'file_access'         => t('File error: Could not access file: '),
+      'file_open'           => t('File error: Could not open file: '),
+
+      // Non-administrative messages.
+      'from_failed'         => t('The following From address failed: '),
+      'invalid_address'     => t('Invalid address'),
+      'provide_address'     => t('You must provide at least one recipient e-mail address.'),
+      'recipients_failed'   => t('The following recipients failed: '),
+    ) + $this->language;
+    return TRUE;
   }
 
   /**
@@ -323,8 +314,6 @@ class DrupalPHPMailer extends PHPMailer implements MailSystemInterface {
         'Content-Transfer-Encoding' => 'Encoding',
         'Sender'                    => 'Sender',
         'Message-ID'                => 'MessageID',
-        // Custom property.
-        // @see DrupalPHPMailer::CreateHeader()
         'Return-Path'               => 'ReturnPath',
       );
       foreach ($properties as $source => $property) {
