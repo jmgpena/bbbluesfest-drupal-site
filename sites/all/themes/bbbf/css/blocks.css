@@ -115,106 +115,101 @@
 /* line 80, ../sass/blocks.scss */
 #block-system-main-menu {
   /* "Main menu" block */
-  position: absolute;
-  right: 50%;
-  margin: 0 -490px 0 0;
+  float: right;
 }
-/* line 84, ../sass/blocks.scss */
+/* line 82, ../sass/blocks.scss */
 #block-system-main-menu ul.menu {
+  padding: 0;
   margin: 45px 0 0 0;
   font: 20px/22px "CubanoRegular", sans-serif;
 }
-/* line 87, ../sass/blocks.scss */
+/* line 86, ../sass/blocks.scss */
 #block-system-main-menu ul.menu li {
   list-style: none none;
   float: left;
   margin: 0 15px;
 }
-/* line 91, ../sass/blocks.scss */
+/* line 90, ../sass/blocks.scss */
 #block-system-main-menu ul.menu li a {
   display: block;
   padding: 0 0 5px 0;
   color: black;
   text-decoration: none;
 }
-/* line 97, ../sass/blocks.scss */
+/* line 96, ../sass/blocks.scss */
 #block-system-main-menu ul.menu li a.active {
   border-bottom: 4px solid black;
 }
 
-/* line 104, ../sass/blocks.scss */
+/* line 103, ../sass/blocks.scss */
 #block-system-management {
   /* "Management" block for Drupal management menu */
 }
 
-/* line 107, ../sass/blocks.scss */
+/* line 106, ../sass/blocks.scss */
 #block-system-navigation {
   /* "Navigation" block for Drupal navigation menu */
 }
 
-/* line 110, ../sass/blocks.scss */
+/* line 109, ../sass/blocks.scss */
 #block-system-user-menu {
   /* "User menu" block for Drupal user menu */
 }
 
-/* line 113, ../sass/blocks.scss */
+/* line 112, ../sass/blocks.scss */
 #block-system-help {
   /* "System help" block */
 }
 
-/* line 116, ../sass/blocks.scss */
+/* line 115, ../sass/blocks.scss */
 #block-system-main {
   /* "Main page content" block */
 }
 
-/* line 119, ../sass/blocks.scss */
+/* line 118, ../sass/blocks.scss */
 #block-system-powered-by {
   /* "Powered by Drupal" block */
 }
 
-/* line 122, ../sass/blocks.scss */
+/* line 121, ../sass/blocks.scss */
 #block-user-login {
   /* "User login form" block */
 }
 
-/* line 125, ../sass/blocks.scss */
+/* line 124, ../sass/blocks.scss */
 #block-user-new {
   /* "Who's new" block for a list of the newest users */
 }
 
-/* line 128, ../sass/blocks.scss */
+/* line 127, ../sass/blocks.scss */
 #block-user-online {
   /* "Who's online" block for a list of the online users */
 }
 
-/* line 132, ../sass/blocks.scss */
+/* line 131, ../sass/blocks.scss */
 #views_slideshow_cycle_teaser_section_featured-block {
   margin: 0 auto;
   max-width: 100%;
   max-heigth: 442px;
 }
-/* line 137, ../sass/blocks.scss */
+/* line 136, ../sass/blocks.scss */
 #views_slideshow_cycle_teaser_section_featured-block img {
   width: 100%;
   max-width: 100%;
 }
 
 /* line 143, ../sass/blocks.scss */
-#block-views-fotos-block {
-  padding: 0 15px;
-}
-/* line 145, ../sass/blocks.scss */
 #block-views-fotos-block img {
-  width: 98px;
+  width: 32%;
   float: left;
-  margin: 0 4px 4px 0;
+  margin: 0 0.5% 0.5% 0;
 }
 
-/* line 153, ../sass/blocks.scss */
+/* line 151, ../sass/blocks.scss */
 #block-views-videos-block {
-  height: 306px;
+  max-height: 306px;
 }
-/* line 156, ../sass/blocks.scss */
+/* line 154, ../sass/blocks.scss */
 #block-views-videos-block .views-field-title {
   color: white;
   z-index: 100;
@@ -223,38 +218,38 @@
   left: 12px;
 }
 
-/* line 166, ../sass/blocks.scss */
+/* line 164, ../sass/blocks.scss */
 #block-block-4 span.bb {
   margin-left: 10px;
 }
 
-/* line 175, ../sass/blocks.scss */
+/* line 173, ../sass/blocks.scss */
 #block-simplenews-1 {
-  width: 490px;
+  min-width: 405px;
 }
-/* line 177, ../sass/blocks.scss */
+/* line 175, ../sass/blocks.scss */
 #block-simplenews-1 h2 {
   font: inherit;
   display: block;
   float: left;
   margin-right: 10px;
 }
-/* line 184, ../sass/blocks.scss */
+/* line 182, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe .form-item-mail {
   margin: 0;
   float: left;
 }
-/* line 187, ../sass/blocks.scss */
+/* line 185, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe .form-item-mail label {
   font: inherit;
   float: left;
 }
-/* line 191, ../sass/blocks.scss */
+/* line 189, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe .form-item-mail input.form-text {
   float: left;
   margin: 0 10px;
 }
-/* line 196, ../sass/blocks.scss */
+/* line 194, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe input.form-submit {
   font: inherit;
   padding: 2px 8px;
@@ -262,7 +257,7 @@
   background-color: light-blue;
 }
 
-/* line 206, ../sass/blocks.scss */
+/* line 204, ../sass/blocks.scss */
 form#simplenews-confirm-add-form input#edit-submit, form#simplenews-confirm-add-form a {
   padding: 5px;
   background: black;

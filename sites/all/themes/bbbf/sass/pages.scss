@@ -54,7 +54,7 @@ body {
   font-family: $title-font;
 
   .region-topbar {
-    width: 988px;
+    max-width: 988px;
     margin: 0 auto;
     a {
       color: white;
@@ -83,7 +83,7 @@ body {
 }
 
 #header {
-  width: 988px;
+  max-width: 988px;
   margin: 0 auto;
 }
 
@@ -94,6 +94,17 @@ body {
 
   img {
     vertical-align: bottom;
+  }
+}
+
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #000 url(../images/menu-icon.png) center;
+  &:hover {
+    background-color: $bbbf-blue;
+    border-radius: 0 4px 4px 0;
   }
 }
 
@@ -129,6 +140,11 @@ body {
 
 #slideshow {
   background-color: black;
+
+  #views_slideshow_cycle_teaser_section_featured-block {
+    line-height: 0;
+    font-size: 0;
+  }
 
   #block-views-featured-block {
     max-width: 1280px;
@@ -217,12 +233,12 @@ body {
   height: 356px;
   background-color: $light-blue;
   .inner_triptic {
-    width: 1008px;
+    max-width: 1008px;
     margin: 0 auto;
   }
   .block { 
-    width: 306px;
-    padding: 0 15px;
+    width: 31.33%;
+    padding: 0 1%;
     float: left; 
     h2 { font: 36px/38px $title-font; }
   }
@@ -241,13 +257,13 @@ body {
 
   .audiojs-default {
     .audiojs {
-      width: 306px;
+      max-width: 306px;
         .scrubber {
           width: 126px;
         }
     }
     ol.audiojs-playlist {
-      width: 306px;
+      max-width: 306px;
     }
   }
 }
@@ -267,9 +283,9 @@ body {
  */
 
 #content {
-  width: 1008px;
+  max-width: 1008px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1.5%;
   #page-title {
     display: none;
     font: 36px/38px $title-font;
@@ -278,15 +294,18 @@ body {
     
   .view-id-novidades {
     .item-list {
+      padding: 0;
       ul {
         list-style: none;
         padding: 0;
+        margin: 0;
         li {
-          display: inline-block;
+          //display: inline-block;
+          float: left;
           vertical-alignment: top;
-          width: 474px;
+          width: 50%;
           padding: 15px 0 15px 0;
-          margin-right: 10px;
+          margin: 0;
           img {
             float: left;
             margin-right: 15px;
@@ -451,14 +470,14 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #footer {
-  width: 988px;
+  max-width: 988px;
   margin: 0 auto;
   padding: 20px 0 0 0;
   .block {
-    padding: 0 5px;
+    padding: 0 0.5%;
     color: white;
     float: left;
-    width: 304px;
+    width: 32.33%;
     h2 {
       font: 36px/38px $title-font;
     }
@@ -476,7 +495,7 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
-  width: 988px;
+  max-width: 988px;
   margin: 0 auto;
   border-top: 1px solid white;
   font: 13px/16px Verdana;

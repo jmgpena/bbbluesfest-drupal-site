@@ -73,141 +73,247 @@ $zen-auto-include-item-base: false;
   @include zen-grid-container();
 }
 
-/*
- * Navigation bar
- */
+@media all and (max-width:1008px) and (min-width:929px) {
 
-@media all and (min-width: 480px) {
+  #header-wrapper {
+    height: 90px;
+
+    #header {
+      img {
+        max-width: 240px;
+      }
+
+      ul.menu {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  #triptic {
+    .audiojs-default {
+      .audiojs {
+        max-width: 280px;
+          .scrubber {
+            width: 100px;
+          }
+      }
+      ol.audiojs-playlist {
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+@media (max-width:928px) {
+  #topbar {
+    height: 40px;
+
+    .region-topbar {
+        
+      #block-block-4 {
+        float: none;
+        text-align: center;
+      }
+
+      #block-simplenews-1 {
+        width: 400px;
+      }
+
+      #block-block-5 {
+        margin-right: 15px;
+      }
+
+    }
+
+  }
+
+  #header-wrapper {
+    height: 70px;
+
+    #header {
+      img {
+        max-width: 180px;
+      }
+
+      ul.menu {
+        margin-top: 20px;
+        font-size: 18px;
+        li {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  #slideshow {
+    
+    .views-field-title {
+      font-size: 34px;
+    }
+
+    .field-name-field-datalocal {
+      font-size: 18px;
+    }
+
+    //.field-name-field-fotos {
+    //  font-size: 0;
+    //  line-height: 0;
+   // }
+
+  }
+
+  #triptic {
+
+    .inner_triptic {
+      width: auto;
+    }
+
+    #block-views-audio-block {
+      display: none;
+    }
+
+    #block-views-videos-block {
+      width: 64%;
+      max-height: 270px;
+      float: right;
+      .views-field-title {
+        top: -245px;
+      }
+    }
+
+  }
+
   #main {
-    padding-top: 3em; /* Move all the children of #main down to make room. */
-    position: relative;
+    #content {
+      width: auto;
+    }
+
+    .item-list {
+      li {
+        width: 40%;
+      }
+    }
   }
-  #navigation {
-    position: absolute;
-    top: 0; /* Move the navbar up inside #main's padding. */
-    height: 3em;
-    width: $zen-grid-width;
-  }
+
 }
 
-@media all and (min-width: 480px) and (max-width: 959px) {
-  /*
-   * Use 3 grid columns for smaller screens.
-   */
-  $zen-column-count: 3;
+@media (max-width:780px) {
 
-  /*
-   * The layout when there is only one sidebar, the left one.
-   */
+  #header-wrapper {
+    height: 60px;
 
-  .sidebar-first {
-    #content { /* Span 2 columns, starting in 2nd column from left. */
-      @include zen-grid-item(2, 2);
-    }
-
-    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
-      @include zen-grid-item(1, 1);
-    }
-  }
-
-  /*
-   * The layout when there is only one sidebar, the right one.
-   */
-
-  .sidebar-second {
-    #content { /* Span 2 columns, starting in 1st column from left. */
-      @include zen-grid-item(2, 1);
-    }
-
-    .region-sidebar-second { /* Span 1 column, starting in 3rd column from left. */
-      @include zen-grid-item(1, 3);
-    }
-  }
-
-  /*
-   * The layout when there are two sidebars.
-   */
-
-  .two-sidebars {
-    #content { /* Span 2 columns, starting in 2nd column from left. */
-      @include zen-grid-item(2, 2);
-    }
-
-    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
-      @include zen-grid-item(1, 1);
-    }
-
-    .region-sidebar-second { /* Start a new row and span all 3 columns. */
-      @include zen-grid-item(3, 1);
-      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
-      @include zen-clear();
-
-      .block {
-        @include zen-grid-item-base();
+    #header {
+      img {
+        max-width: 140px;
       }
-      .block:nth-child(3n+1) { /* Span 1 column, starting in the 1st column from left. */
-        @include zen-grid-item(1, 1);
-        @include zen-clear();
-      }
-      .block:nth-child(3n+2) { /* Span 1 column, starting in the 2nd column from left. */
-        @include zen-grid-item(1, 2);
-      }
-      .block:nth-child(3n) { /* Span 1 column, starting in the 3rd column from left. */
-        @include zen-grid-item(1, 3);
+
+      ul.menu {
+        margin-top: 15px;
+        font-size: 16px;
+        li {
+          margin: 0 8px;
+        }
       }
     }
   }
+
+  #slideshow {
+    
+    .views-field-title {
+      font-size: 28px;
+      max-width: 80%;
+    }
+
+    .field-name-field-datalocal {
+      font-size: 14px;
+      max-width: 80%;
+    }
+
+    //.field-name-field-fotos {
+    //  font-size: 0;
+    //  line-height: 0;
+   // }
+
+  }
+
+
 }
 
-@media all and (min-width: 960px) {
-  /*
-   * Use 5 grid columns for larger screens.
-   */
-  $zen-column-count: 5;
+@media (max-width:665px) {
 
-  /*
-   * The layout when there is only one sidebar, the left one.
-   */
+  #header-wrapper {
+    height: 60px;
 
-  .sidebar-first {
-    #content { /* Span 4 columns, starting in 2nd column from left. */
-      @include zen-grid-item(4, 2);
-    }
+    #header {
+      img {
+        max-width: 140px;
+        float: none;
+        text-align: center;
+      }
 
-    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
-      @include zen-grid-item(1, 1);
-    }
-  }
+      #menu-icon {
+        display: inline-block;
+        float: right;
+        margin-top: 10px;
+      }
 
-  /*
-   * The layout when there is only one sidebar, the right one.
-   */
+      #header-nav:hover {
+        ul.menu {
+          display: inline-block;
+        }
+      }
 
-  .sidebar-second {
-    #content { /* Span 4 columns, starting in 1st column from left. */
-      @include zen-grid-item(4, 1);
-    }
-
-    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-      @include zen-grid-item(1, 5);
-    }
-  }
-
-  /*
-   * The layout when there are two sidebars.
-   */
-
-  .two-sidebars {
-    #content { /* Span 3 columns, starting in 2nd column from left. */
-      @include zen-grid-item(3, 2);
-    }
-
-    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
-      @include zen-grid-item(1, 1);
-    }
-
-    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-      @include zen-grid-item(1, 5);
+      ul.menu {
+        z-index: 1000;
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: white;
+        border: 5px solid $bbbf-blue;
+        right: 50px;
+        top: 55px;
+        width: 100px;
+        border-radius: 4px 0 4px 4px;
+        li {
+          text-align: center;
+          width: 100%;
+          padding: 10px 0;
+          margin: 0;
+        }
+      }
     }
   }
+  
+}
+
+@media (max-width:628px) {
+
+  #topbar {
+    height: auto;
+
+    .region-topbar {
+       
+      #block-block-4,#block-simplenews-1,#block-block-5 {
+        float: none;
+        text-align: center;
+      }
+
+      #block-simplenews-1 {
+        margin: 10px auto;
+        width: auto;
+        min-width: 0;
+      }
+
+    }
+
+  }
+
+  #block-views-videos-block {
+    max-height: 220px;
+  }
+
+}
+
+@media (max-width:320px) {
+  
 }

@@ -78,10 +78,9 @@
 }
 
 #block-system-main-menu { /* "Main menu" block */
-  position: absolute;
-  right: 50%;
-  margin: 0 -490px 0 0;
+  float: right;
   ul.menu {
+    padding: 0;
     margin: 45px 0 0 0;
     font: 20px/22px $title-font;
     li {
@@ -141,17 +140,16 @@
 }
 
 #block-views-fotos-block {
-  padding: 0 15px;
   img { 
-    width: 98px;
+    width: 32%;
     float: left;
-    margin: 0 4px 4px 0; 
+    margin: 0 0.5% 0.5% 0; 
     
   }
 }
 
 #block-views-videos-block {
-  height: 306px;
+  max-height: 306px;
 
   .views-field-title {
     color: white;
@@ -173,7 +171,7 @@
 }
 
 #block-simplenews-1 {
-  width: 490px;
+  min-width: 405px;
   h2 {
     font: inherit;
     display: block;
