@@ -146,6 +146,12 @@
     box-shadow: none;
   }
 
+  .jwplayer-video {
+    width: 306px;
+    max-width: 306px;
+    height: 200px;
+  }
+
   .field-name-title {
     h2 {
       font: 26px/30px $title-font;

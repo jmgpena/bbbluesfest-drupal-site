@@ -231,11 +231,11 @@ function jw_player_ctools_export_ui_form(&$form, &$form_state) {
  * Valdiator for jw_player_ctools_export_ui_form().
  */
 function jw_player_ctools_export_ui_form_validate($form, &$form_state) {
-  $vals = $form_state['values'];
-  if (!is_numeric($vals['settings']['width'])) {
-    form_set_error('width', 'Only numeric values allowed for width' );
-  }
-  if (!is_numeric($vals['settings']['height'])) {
-    form_set_error('width', 'Only numeric values allowed for height' );
-  }
+  /* $vals = $form_state['values']; */
+  /* if (!is_numeric($vals['settings']['width'])) { */
+  /*   form_set_error('width', 'Only numeric values allowed for width' ); */
+  /* } */
+  /* if (!is_numeric($vals['settings']['height'])) { */
+  /*   form_set_error('width', 'Only numeric values allowed for height' ); */
+  /* } */
 }
