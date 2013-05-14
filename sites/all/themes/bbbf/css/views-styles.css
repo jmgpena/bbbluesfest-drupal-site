@@ -93,57 +93,60 @@
   margin-bottom: 4px;
 }
 /* line 81, ../sass/views-styles.scss */
-.view-bilheteira .views-row-last {
+.view-bilheteira .views-row-first {
   width: 330px;
+}
+/* line 84, ../sass/views-styles.scss */
+.view-bilheteira .views-row-last {
   margin-right: 0;
 }
-/* line 87, ../sass/views-styles.scss */
+/* line 89, ../sass/views-styles.scss */
 .view-bilheteira .views-field-add-to-cart-form input.form-submit {
   padding: 5px;
   background: black;
   color: #e9f5fc;
   border: none;
 }
-/* line 94, ../sass/views-styles.scss */
+/* line 96, ../sass/views-styles.scss */
 .view-bilheteira .views-field-add-to-cart-form .form-item-quantity {
   margin: 0 10px 0 0;
   float: left;
 }
-/* line 97, ../sass/views-styles.scss */
+/* line 99, ../sass/views-styles.scss */
 .view-bilheteira .views-field-add-to-cart-form .form-item-quantity label {
   display: none;
 }
-/* line 98, ../sass/views-styles.scss */
+/* line 100, ../sass/views-styles.scss */
 .view-bilheteira .views-field-add-to-cart-form .form-item-quantity input {
   text-align: right;
   padding: 3px;
 }
 
-/* line 107, ../sass/views-styles.scss */
+/* line 109, ../sass/views-styles.scss */
 #block-commerce-cart-cart {
   margin: 0 0 15px 0;
   font-size: 14px;
 }
-/* line 110, ../sass/views-styles.scss */
+/* line 112, ../sass/views-styles.scss */
 #block-commerce-cart-cart table.views-table {
   width: 100%;
   font-weight: bold;
 }
-/* line 113, ../sass/views-styles.scss */
+/* line 115, ../sass/views-styles.scss */
 #block-commerce-cart-cart table.views-table tr {
   background-color: #9dc9e2;
   border-bottom: 1px solid black;
 }
-/* line 117, ../sass/views-styles.scss */
+/* line 119, ../sass/views-styles.scss */
 #block-commerce-cart-cart table.views-table a {
   color: black;
   text-decoration: none;
 }
-/* line 123, ../sass/views-styles.scss */
+/* line 125, ../sass/views-styles.scss */
 #block-commerce-cart-cart span.line-item-total-raw {
   font-weight: bold;
 }
-/* line 128, ../sass/views-styles.scss */
+/* line 130, ../sass/views-styles.scss */
 #block-commerce-cart-cart ul.links a {
   display: inline-block;
   color: #e9f5fc;
@@ -152,45 +155,45 @@
   padding: 4px;
 }
 
-/* line 139, ../sass/views-styles.scss */
+/* line 141, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout fieldset {
   border: none;
   background-color: #9dc9e2;
 }
-/* line 142, ../sass/views-styles.scss */
+/* line 144, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout fieldset legend {
   position: relative;
   top: 15px;
   font: 16px/18px "CubanoRegular", sans-serif;
 }
-/* line 148, ../sass/views-styles.scss */
+/* line 150, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout table.views-table {
   width: 100%;
   font-weight: bold;
 }
-/* line 149, ../sass/views-styles.scss */
+/* line 151, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout table.views-table thead > tr {
   background-color: none;
 }
-/* line 154, ../sass/views-styles.scss */
+/* line 156, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout table.views-table tbody > tr {
   background-color: #e9f5fc;
   border-bottom: 1px solid black;
 }
-/* line 158, ../sass/views-styles.scss */
+/* line 160, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout table.views-table a {
   color: black;
   text-decoration: none;
 }
-/* line 163, ../sass/views-styles.scss */
+/* line 165, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout tr.component-type-commerce-price-formatted-amount {
   background-color: #e9f5fc;
 }
-/* line 167, ../sass/views-styles.scss */
+/* line 169, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout span.button-operator {
   display: none;
 }
-/* line 171, ../sass/views-styles.scss */
+/* line 173, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout input.form-submit {
   padding: 5px;
   background: black;
@@ -199,31 +202,31 @@ form#commerce-checkout-form-checkout input.form-submit {
   margin-right: 10px;
 }
 
-/* line 182, ../sass/views-styles.scss */
+/* line 184, ../sass/views-styles.scss */
 form#commerce-checkout-form-review fieldset {
   border: none;
   background-color: #9dc9e2;
 }
-/* line 185, ../sass/views-styles.scss */
+/* line 187, ../sass/views-styles.scss */
 form#commerce-checkout-form-review fieldset legend {
   position: relative;
   top: 15px;
   font: 16px/18px "CubanoRegular", sans-serif;
   margin: 0 0 15px 0;
 }
-/* line 194, ../sass/views-styles.scss */
+/* line 196, ../sass/views-styles.scss */
 form#commerce-checkout-form-review table.checkout-review tr.pane-title, form#commerce-checkout-form-review table.checkout-review tr.component-type-commerce-price-formatted-amount {
   background-color: #9dc9e2;
 }
-/* line 197, ../sass/views-styles.scss */
+/* line 199, ../sass/views-styles.scss */
 form#commerce-checkout-form-review table.checkout-review tr.pane-data {
   background-color: #e9f5fc;
 }
-/* line 200, ../sass/views-styles.scss */
+/* line 202, ../sass/views-styles.scss */
 form#commerce-checkout-form-review table.checkout-review td.views-field {
   background-color: #9dc9e2;
 }
-/* line 204, ../sass/views-styles.scss */
+/* line 206, ../sass/views-styles.scss */
 form#commerce-checkout-form-review input.form-submit {
   padding: 5px;
   background: black;
@@ -231,7 +234,7 @@ form#commerce-checkout-form-review input.form-submit {
   border: none;
   margin-right: 10px;
 }
-/* line 212, ../sass/views-styles.scss */
+/* line 214, ../sass/views-styles.scss */
 form#commerce-checkout-form-review span.button-operator {
   display: none;
 }
