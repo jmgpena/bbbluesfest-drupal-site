@@ -181,20 +181,22 @@
   }
   form.simplenews-subscribe {
     display: inline-block;
+    white-space: no-wrap;
     .form-item-mail {
       margin: 0;
-      float: left;
+      display: inline-block;
       label {
         margin-top: 2px;
         font: inherit;
-        float: left;
+        display: inline-block;
       }
       input.form-text {
-        float: left;
+        display: inline-block;
         margin: 0 10px;
       }
     }
     input.form-submit {
+      display: inline-block;
       font: inherit;
       padding: 2px 8px;
       border: none;
