@@ -93,7 +93,7 @@
         color: black;
         text-decoration: none;
       }
-      a.active { 
+      a.active {
         border-bottom: 4px solid black;
       }
     }
@@ -132,7 +132,7 @@
   margin: 0 auto;
   max-width: 100%;
   max-heigth: 442px;
-  
+
   img {
     width: 100%;
     max-width: 100%;
@@ -140,11 +140,11 @@
 }
 
 #block-views-fotos-block {
-  img { 
+  img {
     width: 32%;
     float: left;
-    margin: 0 0.5% 0.5% 0; 
-    
+    margin: 0 0.5% 0.5% 0;
+
   }
 }
 
@@ -167,22 +167,25 @@
 }
 
 #block-block-5 {
-  
+
 }
 
 #block-simplenews-1 {
+  white-space: nowrap;
   min-width: 405px;
   h2 {
+    vertical-align: middle;
     font: inherit;
-    display: block;
-    float: left;
+    display: inline-block;
     margin-right: 10px;
   }
   form.simplenews-subscribe {
+    display: inline-block;
     .form-item-mail {
       margin: 0;
       float: left;
       label {
+        margin-top: 2px;
         font: inherit;
         float: left;
       }
