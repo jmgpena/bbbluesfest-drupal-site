@@ -62,7 +62,7 @@ body {
 }
 /* line 65, ../sass/pages.scss */
 #topbar .region-topbar a:hover {
-  color: #dd5e00;
+  color: #39b549;
 }
 /* line 69, ../sass/pages.scss */
 #topbar .region-topbar p {
@@ -81,7 +81,7 @@ body {
 /* line 80, ../sass/pages.scss */
 #header-wrapper {
   height: 105px;
-  background-color: #e9f5fc;
+  background-color: #e8e6d5;
 }
 
 /* line 85, ../sass/pages.scss */
@@ -111,7 +111,7 @@ body {
 }
 /* line 105, ../sass/pages.scss */
 #menu-icon:hover {
-  background-color: #a6d9f3;
+  background-color: #a1c9e5;
   border-radius: 0 4px 4px 0;
 }
 
@@ -193,7 +193,7 @@ body {
   left: 12.5%;
   bottom: 45px;
   text-shadow: #444 0 2px 2px;
-  color: #dd5e00;
+  color: #39b549;
 }
 /* line 186, ../sass/pages.scss */
 #slideshow span#views_slideshow_controls_text_previous_featured-block a {
@@ -241,7 +241,7 @@ body {
 #triptic {
   padding: 10px 0;
   height: 356px;
-  background-color: #e9f5fc;
+  background-color: #e8e6d5;
 }
 /* line 235, ../sass/pages.scss */
 #triptic .inner_triptic {
@@ -294,7 +294,7 @@ body {
 #main {
   clear: both;
   padding-top: 4px;
-  background-color: #a6d9f3;
+  background-color: #a1c9e5;
 }
 
 /*
@@ -339,7 +339,7 @@ body {
 #content .view-id-novidades .item-list ul li .field-name-post-date {
   font-size: 13px;
   font-weight: bold;
-  color: #dd5e00;
+  color: #39b549;
 }
 /* line 319, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li .field-name-title h2 {
@@ -350,7 +350,7 @@ body {
 #content .view-id-novidades .item-list ul li .field-name-node-link a {
   display: inline-block;
   padding: 0 9px;
-  color: #a6d9f3;
+  color: #a1c9e5;
   background-color: black;
   text-decoration: none;
   font-variant: small-caps;
@@ -585,7 +585,7 @@ span.field-label {
   float: left;
   clear: left;
   margin: 10px 0;
-  background-color: #9dc9e2;
+  background-color: #92b4bf;
   padding: 5px 15px;
 }
 /* line 524, ../sass/pages.scss */
@@ -598,7 +598,7 @@ span.field-label {
 }
 /* line 527, ../sass/pages.scss */
 .node-6.node-page .day a:hover, .node-6.node-page .bigday a:hover {
-  color: #dd5e00;
+  color: #39b549;
 }
 /* line 530, ../sass/pages.scss */
 .node-6.node-page #day28 {
@@ -657,7 +657,7 @@ div.box {
   width: 444px;
   float: left;
   margin: 10px 0;
-  background-color: #9dc9e2;
+  background-color: #92b4bf;
   padding: 15px 15px;
   margin: 15px 15px 15px 0;
   font: 22px/24px "CubanoRegular", sans-serif;
@@ -674,5 +674,5 @@ div.box a:visited {
 }
 /* line 589, ../sass/pages.scss */
 div.box a:hover {
-  color: #dd5e00;
+  color: #39b549;
 }

@@ -66,7 +66,7 @@
 }
 /* line 51, ../sass/nodes.scss */
 .node-teaser a:hover {
-  color: #dd5e00;
+  color: #39b549;
 }
 /* line 52, ../sass/nodes.scss */
 .node-teaser a:visited {
@@ -203,7 +203,7 @@
 }
 /* line 174, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-discos, .node-banda.view-mode-full .field-name-field-composicao, .node-banda.view-mode-full .field-name-field-links {
-  background-color: #9dc9e2;
+  background-color: #92b4bf;
   list-style-type: none;
   padding: 0;
   margin: 0;
