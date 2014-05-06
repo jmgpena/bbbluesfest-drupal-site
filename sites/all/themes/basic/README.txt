@@ -1,11 +1,11 @@
 
 Introduction to Basic
 
-Basic boasts a clean HTML5 structure with extensible CSS classes and ID's for unlimited 
+Basic boasts a clean HTML5 structure with extensible CSS classes and ID's for unlimited
 theming possibilities as well as a top-down load order for improved SEO. It is fully
 responsive out-of-the-box and provides an adaptive, elegant, SASS based grid system (Bourbon Neat).
 
-Basic's goal is to provide themers the building blocks needed to get their designs up and 
+Basic's goal is to provide themers the building blocks needed to get their designs up and
 running quickly and simply.
 
 Basic is perfect if you want a simple, smart, and flexible theme starter.
@@ -29,9 +29,7 @@ follow these steps (to do BEFORE enabling the theme) :
 
     - rename the theme folder to 'mytheme'
     - rename basic.info to mytheme.info
-    - Edit basic.info and change the name, description, projet (can be deleted)
-    - In basic.info replace [basic_block_editing] and [basic_rebuild_registry]
-      by [mytheme_block_editing] and [mytheme_rebuild_registry]
+    - Edit basic.info and change the name, description, project (can be deleted), replace all other instances of "basic" ie. [basic_tabs] would become [mytheme_tabs]
     - In template.php change each iteration of 'basic' to 'mytheme'
     - In theme-settings.php change each iteration of 'basic' to 'mytheme'
 
@@ -101,3 +99,4 @@ http://drupal.org/project/issues/basic
 
 Current maintainers:
 * Steve Krueger (SteveK) -http://drupal.org/user/111656 (http://thejibe.com)
+* Niall Morgan (lil.destro) -https://drupal.org/user/597808 (http://thejibe.com)

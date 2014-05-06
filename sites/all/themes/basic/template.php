@@ -2,7 +2,7 @@
 
 /**
  * Here we override the default HTML output of drupal.
- * refer to http://drupal.org/node/550722
+ * refer to https://drupal.org/node/457740
  */
 
 // Auto-rebuild the theme registry during theme development.
@@ -19,12 +19,31 @@ if (theme_get_setting('basic_tabs')) {
 }
 
 function basic_preprocess_html(&$vars) {
-  global $user;
+  global $user, $language;
 
-  //Add role name classes (to allow css based show for admin/hidden from user)
+  // Add role name classes (to allow css based show for admin/hidden from user)
   foreach ($user->roles as $role){
     $vars['classes_array'][] = 'role-' . basic_id_safe($role);
   }
+
+  // HTML Attributes
+  // Use a proper attributes array for the html attributes.
+  $vars['html_attributes'] = array();
+  $vars['html_attributes']['lang'][] = $language->language;
+  $vars['html_attributes']['dir'][] = $language->dir;
+
+  // Convert RDF Namespaces into structured data using drupal_attributes.
+  $vars['rdf_namespaces'] = array();
+  if (function_exists('rdf_get_namespaces')) {
+    foreach (rdf_get_namespaces() as $prefix => $uri) {
+      $prefixes[] = $prefix . ': ' . $uri;
+    }
+    $vars['rdf_namespaces']['prefix'] = implode(' ', $prefixes);
+  }
+
+  // Flatten the HTML attributes and RDF namespaces arrays.
+  $vars['html_attributes'] = drupal_attributes($vars['html_attributes']);
+  $vars['rdf_namespaces'] = drupal_attributes($vars['rdf_namespaces']);
 
   if (!$vars['is_front']) {
     // Add unique classes for each page and website section
@@ -49,10 +68,10 @@ function basic_preprocess_html(&$vars) {
           array_pop( $vars['classes_array']);
         }
         // Add 'section-node-edit' or 'section-node-delete'
-        $vars['classes_array'][] = 'section-node-'. arg(2); 
+        $vars['classes_array'][] = 'section-node-'. arg(2);
       }
     }
-  } 
+  }
   //for normal un-themed edit pages
   if ((arg(0) == 'node') && (arg(2) == 'edit')) {
     $vars['template_files'][] =  'page';
@@ -243,7 +262,9 @@ function basic_menu_link(array $variables) {
   // Adding a class depending on the TITLE of the link (not constant)
   $element['#attributes']['class'][] = basic_id_safe($element['#title']);
   // Adding a class depending on the ID of the link (constant)
-  $element['#attributes']['class'][] = 'mid-' . $element['#original_link']['mlid'];
+  if (isset($element['#original_link']['mlid']) && !empty($element['#original_link']['mlid'])) {
+    $element['#attributes']['class'][] = 'mid-' . $element['#original_link']['mlid'];
+  }
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 

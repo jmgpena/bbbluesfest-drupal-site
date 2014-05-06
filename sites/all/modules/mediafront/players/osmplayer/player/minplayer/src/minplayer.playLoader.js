@@ -60,7 +60,7 @@ minplayer.playLoader.prototype.initializePlayLoader = function() {
 
       // Get the poster image.
       if (!this.options.preview) {
-        this.options.preview = media.elements.media.attr('poster');
+        this.options.preview = media.poster;
       }
 
       // Determine if we should load the image.
@@ -127,6 +127,7 @@ minplayer.playLoader.prototype.initializePlayLoader = function() {
       media.ubind(this.uuid + ':pause', (function(playLoader) {
         return function(event, data, reset) {
           if (!reset) {
+            playLoader.busy.setFlag('media', false);
             playLoader.bigPlay.setFlag('media', true);
             playLoader.checkVisibility();
           }
@@ -205,7 +206,7 @@ minplayer.playLoader.prototype.loadPreview = function(image) {
   this.options.preview = image;
 
   // Ignore if disabled.
-  if (!this.enabled || (this.display.length == 0)) {
+  if (!this.enabled || (this.display.length === 0)) {
     return;
   }
 

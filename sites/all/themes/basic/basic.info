@@ -44,9 +44,9 @@ settings[basic_ie_enabled] = 0
 settings[basic_ie_enabled_versions][ie8] = 0
 settings[basic_ie_enabled_versions][ie9] = 0
 settings[basic_ie_enabled_versions][ie10] = 0
-; Information added by drupal.org packaging script on 2013-03-09
-version = "7.x-3.2"
+; Information added by Drupal.org packaging script on 2014-03-03
+version = "7.x-3.4"
 core = "7.x"
 project = "basic"
-datestamp = "1362873016"
+datestamp = "1393890507"
 

@@ -77,6 +77,13 @@ function osmplayer_get_player($params) {
 
   $output = '';
 
+  // Iterate through each parameter and filter it for output.
+  foreach ($params as $param => &$value) {
+    if (gettype($value) == 'string') {
+      $value = check_plain($value);
+    }
+  }
+
   // If we wish to show the media player.
   if ($showPlayer) {
 
@@ -259,7 +266,7 @@ function osmplayer_add_connection($params, $type) {
   $output = '';
 
   // Check to see if connect is set.
-  if (!empty($params['connect'])) {
+  if (!empty($params['connect']) && !empty($params['connect']['is' . $type])) {
 
     $connnection = array_filter($params['connect']['is' . $type]);
 
@@ -317,6 +324,7 @@ function osmplayer_library() {
         $path . '/minplayer/src/minplayer.players.minplayer.js' => $options,
         $path . '/minplayer/src/minplayer.players.youtube.js' => $options,
         $path . '/minplayer/src/minplayer.players.vimeo.js' => $options,
+        $path . '/minplayer/src/minplayer.players.dailymotion.js' => $options,
         $path . '/minplayer/src/minplayer.controller.js' => $options
       ),
       'dependencies' => array(

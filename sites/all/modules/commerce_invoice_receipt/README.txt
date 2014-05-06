@@ -2,9 +2,11 @@ CONTENTS OF THIS FILE
 ---------------------
 
  * Introduction
+ * Requirements
  * Installation
  * Known issues
  * Support
+ * Troubleshooting
  * Sponsorship
 
 
@@ -17,6 +19,11 @@ to customise how elements are displayed. Secondly it provides a rule which will
 email the HTML invoice. You have total control over how your invoice will look
 through a template.
 
+REQUIREMENTS
+------------
+
+This module requires the Emogrifier (http://drupal.org/project/emogrifier)
+module to convert stylesheet rules to inline style attributes.
 
 INSTALLATION
 ------------
@@ -43,6 +50,12 @@ KNOWN ISSUES
  * None
 
 
+TROUBLESHOOTING
+---------------
+
+1. Emails being sent out as plain text: 
+   Set the site-wide default to HTMLMailSystem
+ 
 SUPPORT
 -------
 

@@ -12,7 +12,8 @@
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: verdana, arial, helvetica; font-size: 11px;">
                   <tr>
                     <td nowrap="nowrap" style="line-height: 1.6em;" valign="middle">
-                      [INSERT HEADER]
+											<!-- Invoice Header -->
+											<img src="<?php print $info['site_logo']; ?>" />
                     </td>
                   </tr>
                 </table>
@@ -74,7 +75,8 @@
                 <table>
                   <tr>
                     <td colspan="2" style="background: #EEE; color: #666; padding: 1em; font-size: 0.9em; line-height: 1.6em; border-top: #CCC 1px dotted; text-align: center;">
-                      [INSERT FOOTER]
+                      <!-- Invoice Header -->
+											[INSERT FOOTER]
                     </td>
                   </tr>
                 </table>

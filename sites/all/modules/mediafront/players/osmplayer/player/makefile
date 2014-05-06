@@ -27,6 +27,7 @@ files =   minplayer/src/minplayer.compatibility.js\
           minplayer/src/minplayer.players.youtube.js\
           minplayer/src/minplayer.players.vimeo.js\
           minplayer/src/minplayer.players.limelight.js\
+          minplayer/src/minplayer.players.kaltura.js\
           minplayer/src/minplayer.controller.js\
           src/osmplayer.js\
           src/osmplayer.parser.default.js\
@@ -51,7 +52,7 @@ all: jslint js jsdoc
 
 # Perform a jsLint on all the files.
 jslint: ${files}
-	gjslint $^
+	jshint $^
 
 # Create an aggregated js file and a compressed js file.
 js: ${files}
@@ -91,3 +92,4 @@ tools:
 	mv tools/jsdoc_toolkit-2.4.0/jsdoc-toolkit tools/jsdoc-toolkit
 	rm -rd tools/jsdoc_toolkit-2.4.0
 	rm tools/jsdoc_toolkit-2.4.0.zip
+	npm install jshint

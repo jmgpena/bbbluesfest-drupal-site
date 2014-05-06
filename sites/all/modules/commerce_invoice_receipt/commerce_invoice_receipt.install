@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * @file Commerce Invoice Receipt - Installation file.
+ */
+ 
+/**
  * Implements hook_install().
  */
 function commerce_invoice_receipt_install() {

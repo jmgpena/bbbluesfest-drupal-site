@@ -11,7 +11,7 @@
     <?php endif; ?>
 
     <?php if ($site_name || $site_slogan): ?>
-      <hgroup id="name-and-slogan">
+      <div id="name-and-slogan">
 
         <?php if ($site_name): ?>
           <?php if ($title): ?>
@@ -29,7 +29,7 @@
           <div id="site-slogan"><?php print $site_slogan; ?></div>
         <?php endif; ?>
 
-      </hgroup>
+      </div>
     <?php endif; ?>
 
     <?php if ($page['header']): ?>
