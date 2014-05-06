@@ -540,9 +540,13 @@ span.field-label {
 }
 /* line 481, ../sass/pages.scss */
 #footer .block h2 {
-  font: 36px/38px "CubanoRegular", sans-serif;
+  font: 32px/34px "CubanoRegular", sans-serif;
 }
 /* line 484, ../sass/pages.scss */
+#footer .block p, #footer .block .form-item {
+  margin: 8px 0;
+}
+/* line 487, ../sass/pages.scss */
 #footer .block a {
   color: white;
 }
@@ -550,13 +554,13 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 492, ../sass/pages.scss */
+/* line 495, ../sass/pages.scss */
 #bottom-wrapper {
   background-color: black;
   color: white;
 }
 
-/* line 497, ../sass/pages.scss */
+/* line 500, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
   max-width: 988px;
@@ -565,13 +569,13 @@ span.field-label {
   font: 13px/16px Verdana;
   color: darkgray;
 }
-/* line 503, ../sass/pages.scss */
+/* line 506, ../sass/pages.scss */
 .region-bottom a {
   color: white;
   font-weigth: bold;
   text-decoration: none;
 }
-/* line 508, ../sass/pages.scss */
+/* line 511, ../sass/pages.scss */
 .region-bottom p {
   margin: 4px 0 0;
 }
@@ -579,7 +583,7 @@ span.field-label {
 /*
  * Programa do Festival
  */
-/* line 517, ../sass/pages.scss */
+/* line 520, ../sass/pages.scss */
 .node-6.node-page .day, .node-6.node-page .bigday {
   width: 444px;
   float: left;
@@ -588,71 +592,71 @@ span.field-label {
   background-color: #92b4bf;
   padding: 5px 15px;
 }
-/* line 524, ../sass/pages.scss */
+/* line 527, ../sass/pages.scss */
 .node-6.node-page .day a, .node-6.node-page .bigday a {
   color: inherit;
 }
-/* line 526, ../sass/pages.scss */
+/* line 529, ../sass/pages.scss */
 .node-6.node-page .day a:visited, .node-6.node-page .bigday a:visited {
   color: inherit;
 }
-/* line 527, ../sass/pages.scss */
+/* line 530, ../sass/pages.scss */
 .node-6.node-page .day a:hover, .node-6.node-page .bigday a:hover {
   color: #39b549;
 }
-/* line 530, ../sass/pages.scss */
+/* line 533, ../sass/pages.scss */
 .node-6.node-page #day28 {
   clear: none;
 }
-/* line 531, ../sass/pages.scss */
+/* line 534, ../sass/pages.scss */
 .node-6.node-page #day29 {
   float: right;
   clear: none;
 }
-/* line 533, ../sass/pages.scss */
+/* line 536, ../sass/pages.scss */
 .node-6.node-page .bigday .daynumber {
   font: 49px/54px "CubanoRegular", sans-serif;
   color: white;
 }
-/* line 541, ../sass/pages.scss */
+/* line 544, ../sass/pages.scss */
 .node-6.node-page .day .daynumber {
   font: 39px/39px "CubanoRegular", sans-serif;
   color: white;
   float: left;
   margin: 0 10px 20px 0;
 }
-/* line 550, ../sass/pages.scss */
+/* line 553, ../sass/pages.scss */
 .node-6.node-page .black {
   color: black;
 }
-/* line 551, ../sass/pages.scss */
+/* line 554, ../sass/pages.scss */
 .node-6.node-page .white {
   color: white;
 }
-/* line 553, ../sass/pages.scss */
+/* line 556, ../sass/pages.scss */
 .node-6.node-page .bigband {
   font: 34px/36px "CubanoRegular", sans-serif;
   margin: 10px 0 0 0;
 }
-/* line 558, ../sass/pages.scss */
+/* line 561, ../sass/pages.scss */
 .node-6.node-page .band {
   font: 24px/28px "CubanoRegular", sans-serif;
 }
-/* line 562, ../sass/pages.scss */
+/* line 565, ../sass/pages.scss */
 .node-6.node-page .label {
   font: 13px/16px "CubanoRegular", sans-serif;
 }
-/* line 566, ../sass/pages.scss */
+/* line 569, ../sass/pages.scss */
 .node-6.node-page .feat {
   font: 16px/18px "CubanoRegular", sans-serif;
 }
-/* line 570, ../sass/pages.scss */
+/* line 573, ../sass/pages.scss */
 .node-6.node-page a {
   text-decoration: none;
 }
 
 /* caixas nas paginas de conteudo */
-/* line 576, ../sass/pages.scss */
+/* line 579, ../sass/pages.scss */
 div.box {
   width: 444px;
   float: left;
@@ -663,16 +667,16 @@ div.box {
   font: 22px/24px "CubanoRegular", sans-serif;
   color: white;
 }
-/* line 585, ../sass/pages.scss */
+/* line 588, ../sass/pages.scss */
 div.box a {
   color: inherit;
   text-decoration: none;
 }
-/* line 588, ../sass/pages.scss */
+/* line 591, ../sass/pages.scss */
 div.box a:visited {
   color: inherit;
 }
-/* line 589, ../sass/pages.scss */
+/* line 592, ../sass/pages.scss */
 div.box a:hover {
   color: #39b549;
 }

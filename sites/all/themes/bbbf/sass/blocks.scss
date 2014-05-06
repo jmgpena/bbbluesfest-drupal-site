@@ -171,33 +171,23 @@
 }
 
 #block-simplenews-1 {
-  white-space: nowrap;
-  min-width: 405px;
   h2 {
-    vertical-align: middle;
     font: inherit;
-    display: inline-block;
-    margin-right: 10px;
   }
   form.simplenews-subscribe {
-    display: inline-block;
-    white-space: no-wrap;
     .form-item-mail {
-      margin: 0;
-      display: inline-block;
+      white-space: nowrap;
       label {
-        margin-top: 2px;
         font: inherit;
         display: inline-block;
       }
       input.form-text {
         display: inline-block;
-        margin: 0 10px;
       }
     }
     input.form-submit {
-      display: inline-block;
       font: inherit;
+      margin-bottom: 8px;
       padding: 2px 8px;
       border: none;
       background-color: light-blue;

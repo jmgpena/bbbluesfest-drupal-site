@@ -223,49 +223,33 @@
   margin-left: 10px;
 }
 
-/* line 173, ../sass/blocks.scss */
-#block-simplenews-1 {
-  white-space: nowrap;
-  min-width: 405px;
-}
-/* line 176, ../sass/blocks.scss */
+/* line 174, ../sass/blocks.scss */
 #block-simplenews-1 h2 {
-  vertical-align: middle;
+  font: inherit;
+}
+/* line 178, ../sass/blocks.scss */
+#block-simplenews-1 form.simplenews-subscribe .form-item-mail {
+  white-space: nowrap;
+}
+/* line 180, ../sass/blocks.scss */
+#block-simplenews-1 form.simplenews-subscribe .form-item-mail label {
   font: inherit;
   display: inline-block;
-  margin-right: 10px;
 }
-/* line 182, ../sass/blocks.scss */
-#block-simplenews-1 form.simplenews-subscribe {
-  display: inline-block;
-  white-space: no-wrap;
-}
-/* line 185, ../sass/blocks.scss */
-#block-simplenews-1 form.simplenews-subscribe .form-item-mail {
-  margin: 0;
+/* line 184, ../sass/blocks.scss */
+#block-simplenews-1 form.simplenews-subscribe .form-item-mail input.form-text {
   display: inline-block;
 }
 /* line 188, ../sass/blocks.scss */
-#block-simplenews-1 form.simplenews-subscribe .form-item-mail label {
-  margin-top: 2px;
-  font: inherit;
-  display: inline-block;
-}
-/* line 193, ../sass/blocks.scss */
-#block-simplenews-1 form.simplenews-subscribe .form-item-mail input.form-text {
-  display: inline-block;
-  margin: 0 10px;
-}
-/* line 198, ../sass/blocks.scss */
 #block-simplenews-1 form.simplenews-subscribe input.form-submit {
-  display: inline-block;
   font: inherit;
+  margin-bottom: 8px;
   padding: 2px 8px;
   border: none;
   background-color: light-blue;
 }
 
-/* line 209, ../sass/blocks.scss */
+/* line 199, ../sass/blocks.scss */
 form#simplenews-confirm-add-form input#edit-submit, form#simplenews-confirm-add-form a {
   padding: 5px;
   background: black;
