@@ -79,7 +79,7 @@ body {
 
 #header-wrapper {
   height: 105px;
-  background-color: $light-blue;
+  background-color: $bbbf-blue;
 }
 
 #header {
@@ -160,7 +160,7 @@ body {
     position: absolute;
     font: 39px/44px $title-font;
     left: 12.5%;
-    bottom: 90px;
+    bottom: 100px;
     text-shadow: #444 0 2px 2px;
     //width: 310px;
     color: white;
@@ -176,10 +176,32 @@ body {
     position: absolute;
     font: 24px/28px $title-font;
     left: 12.5%;
+    bottom: 70px;
+    text-shadow: #444 0 2px 2px;
+    //width: 310px;
+    color: $orange;
+  }
+
+  .field-name-field-local {
+    position: absolute;
+    font: 18px/22px $title-font;
+    left: 12.5%;
     bottom: 45px;
     text-shadow: #444 0 2px 2px;
     //width: 310px;
     color: $orange;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .field-name-field-entrada {
+    position: absolute;
+    font: 18px/22px $title-font;
+    left: 12.5%;
+    bottom: 25px;
+    text-shadow: #444 0 2px 2px;
+    //width: 310px;
+    color: $orange;
+    background-color: rgba(0,0,0,0.5);
   }
 
   span#views_slideshow_controls_text_previous_featured-block {
@@ -275,7 +297,7 @@ body {
 #main {
   clear: both;
   padding-top: 4px;
-  background-color: $bbbf-blue;
+  background-color: $light-blue;
 }
 
 /*

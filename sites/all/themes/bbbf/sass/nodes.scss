@@ -79,7 +79,7 @@
 
 .node-banda.node-teaser {
   .field-name-title {
-    h2 { 
+    h2 {
       font: 24px/28px $title-font;
       margin: 0;
     }
@@ -110,7 +110,7 @@
 .node-article.node-teaser {
   margin: 10px 0 0 0;
   .field-name-title {
-    h2 { 
+    h2 {
       font: 24px/28px $title-font;
       margin: 0;
     }
@@ -150,18 +150,30 @@
     width: 306px;
     max-width: 306px;
     height: 200px;
+    max-height: 200px;
   }
 
   .field-name-title {
     h2 {
       font: 26px/30px $title-font;
-      margin: 0 0 30px 0;
+      margin: 0 0 20px 0;
     }
   }
 
   .field-name-field-datalocal {
     font: 20px/24px $title-font;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
+  }
+
+  .field-name-field-local {
+    font: 16px/18px $title-font;
+    margin: 0 0 10px 0;
+  }
+
+  .field-name-field-entrada {
+    color: $orange;
+    font: 16px/18px $title-font;
+    margin: 0 0 10px 0;
   }
 
   .field-name-field-discografia {
@@ -172,7 +184,7 @@
   }
 
   .field-name-field-discos,.field-name-field-composicao,.field-name-field-links {
-    background-color: $dark-blue;
+    background-color: $light-blue;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -180,7 +192,7 @@
       margin-bottom: 5px;
     }
   }
-  
+
   h3.field-label,h2.field-item {
     margin: 15px 0 10px 0;
   }
