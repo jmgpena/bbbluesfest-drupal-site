@@ -604,7 +604,7 @@ span.field-label {
  * Programa do Festival
  */
 /* line 542, ../sass/pages.scss */
-.node-6 .day, .node-6 .bigday, .node-45 .day, .node-45 .bigday, .node-46 .day, .node-46 .bigday {
+.node-6 .day, .node-6 .bigday, .node-45 .day, .node-45 .bigday, .node-46 .day, .node-46 .bigday, .node-53 .day, .node-53 .bigday, .node-54 .day, .node-54 .bigday {
   width: 444px;
   float: left;
   clear: left;
@@ -613,65 +613,65 @@ span.field-label {
   padding: 5px 15px;
 }
 /* line 549, ../sass/pages.scss */
-.node-6 .day a, .node-6 .bigday a, .node-45 .day a, .node-45 .bigday a, .node-46 .day a, .node-46 .bigday a {
+.node-6 .day a, .node-6 .bigday a, .node-45 .day a, .node-45 .bigday a, .node-46 .day a, .node-46 .bigday a, .node-53 .day a, .node-53 .bigday a, .node-54 .day a, .node-54 .bigday a {
   color: inherit;
 }
 /* line 551, ../sass/pages.scss */
-.node-6 .day a:visited, .node-6 .bigday a:visited, .node-45 .day a:visited, .node-45 .bigday a:visited, .node-46 .day a:visited, .node-46 .bigday a:visited {
+.node-6 .day a:visited, .node-6 .bigday a:visited, .node-45 .day a:visited, .node-45 .bigday a:visited, .node-46 .day a:visited, .node-46 .bigday a:visited, .node-53 .day a:visited, .node-53 .bigday a:visited, .node-54 .day a:visited, .node-54 .bigday a:visited {
   color: inherit;
 }
 /* line 552, ../sass/pages.scss */
-.node-6 .day a:hover, .node-6 .bigday a:hover, .node-45 .day a:hover, .node-45 .bigday a:hover, .node-46 .day a:hover, .node-46 .bigday a:hover {
+.node-6 .day a:hover, .node-6 .bigday a:hover, .node-45 .day a:hover, .node-45 .bigday a:hover, .node-46 .day a:hover, .node-46 .bigday a:hover, .node-53 .day a:hover, .node-53 .bigday a:hover, .node-54 .day a:hover, .node-54 .bigday a:hover {
   color: #39b549;
 }
 /* line 555, ../sass/pages.scss */
-.node-6 #day28, .node-45 #day28, .node-46 #day28 {
+.node-6 #day28, .node-45 #day28, .node-46 #day28, .node-53 #day28, .node-54 #day28 {
   clear: none;
 }
 /* line 556, ../sass/pages.scss */
-.node-6 #day29, .node-45 #day29, .node-46 #day29 {
+.node-6 #day29, .node-45 #day29, .node-46 #day29, .node-53 #day29, .node-54 #day29 {
   float: right;
   clear: none;
 }
 /* line 558, ../sass/pages.scss */
-.node-6 .bigday .daynumber, .node-45 .bigday .daynumber, .node-46 .bigday .daynumber {
+.node-6 .bigday .daynumber, .node-45 .bigday .daynumber, .node-46 .bigday .daynumber, .node-53 .bigday .daynumber, .node-54 .bigday .daynumber {
   font: 49px/54px "CubanoRegular", sans-serif;
   color: white;
 }
 /* line 566, ../sass/pages.scss */
-.node-6 .day .daynumber, .node-45 .day .daynumber, .node-46 .day .daynumber {
+.node-6 .day .daynumber, .node-45 .day .daynumber, .node-46 .day .daynumber, .node-53 .day .daynumber, .node-54 .day .daynumber {
   font: 39px/39px "CubanoRegular", sans-serif;
   color: white;
   float: left;
   margin: 0 10px 20px 0;
 }
 /* line 575, ../sass/pages.scss */
-.node-6 .black, .node-45 .black, .node-46 .black {
+.node-6 .black, .node-45 .black, .node-46 .black, .node-53 .black, .node-54 .black {
   color: black;
 }
 /* line 576, ../sass/pages.scss */
-.node-6 .white, .node-45 .white, .node-46 .white {
+.node-6 .white, .node-45 .white, .node-46 .white, .node-53 .white, .node-54 .white {
   color: white;
 }
 /* line 578, ../sass/pages.scss */
-.node-6 .bigband, .node-45 .bigband, .node-46 .bigband {
+.node-6 .bigband, .node-45 .bigband, .node-46 .bigband, .node-53 .bigband, .node-54 .bigband {
   font: 34px/36px "CubanoRegular", sans-serif;
   margin: 10px 0 0 0;
 }
 /* line 583, ../sass/pages.scss */
-.node-6 .band, .node-45 .band, .node-46 .band {
+.node-6 .band, .node-45 .band, .node-46 .band, .node-53 .band, .node-54 .band {
   font: 24px/28px "CubanoRegular", sans-serif;
 }
 /* line 587, ../sass/pages.scss */
-.node-6 .label, .node-45 .label, .node-46 .label {
+.node-6 .label, .node-45 .label, .node-46 .label, .node-53 .label, .node-54 .label {
   font: 13px/16px "CubanoRegular", sans-serif;
 }
 /* line 591, ../sass/pages.scss */
-.node-6 .feat, .node-45 .feat, .node-46 .feat {
+.node-6 .feat, .node-45 .feat, .node-46 .feat, .node-53 .feat, .node-54 .feat {
   font: 16px/18px "CubanoRegular", sans-serif;
 }
 /* line 595, ../sass/pages.scss */
-.node-6 a, .node-45 a, .node-46 a {
+.node-6 a, .node-45 a, .node-46 a, .node-53 a, .node-54 a {
   text-decoration: none;
 }
 
