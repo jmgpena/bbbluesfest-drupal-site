@@ -17,6 +17,8 @@ class visualization_plugin_style extends views_plugin_style {
   public function option_definition() {
     $options = parent::option_definition();
 
+    $options['title'] = array('default' => '');
+
     $options['type'] = array('default' => 'line');
 
     $options['fields'] = array('default' => array());
@@ -36,6 +38,13 @@ class visualization_plugin_style extends views_plugin_style {
     parent::options_form($form, $form_state);
 
     $fields = $this->display->handler->get_field_labels();
+
+    $form['title'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Chart Title'),
+      '#default_value' => $this->options['title'],
+      '#description' => t('Enter a custom title for this chart.'),
+    );
 
     $form['type'] = array(
       '#type' => 'select',
@@ -58,8 +67,6 @@ class visualization_plugin_style extends views_plugin_style {
     );
 
     foreach ($fields as $field => $column) {
-      $handler = $this->display->handler->handlers['field'][$field];
-
       $form['fields'][$field] = array(
         '#type' => 'fieldset',
         '#title' => check_plain($field),
@@ -73,19 +80,6 @@ class visualization_plugin_style extends views_plugin_style {
         '#default_value' => $this->options['fields'][$field]['enabled'],
         '#dependency' => array('style_options', 'fields', $field, 'type'),
       );
-
-      if ($handler->click_sortable()) {
-        $form['fields'][$field]['sort'] = array(
-          '#type' => 'select',
-          '#title' => t('Sort'),
-          '#options' => array(
-            'DESC' => t('Descending'),
-            'ASC' => t('Ascending'),
-          ),
-          '#default_value' => $this->options['fields'][$field]['sort'],
-          '#empty_value' => FALSE,
-        );
-      }
     }
 
     $form['xAxis'] = array(
@@ -119,22 +113,8 @@ class visualization_plugin_style extends views_plugin_style {
     $form['yAxis']['title'] = array(
       '#type' => 'textfield',
       '#title' => t('Y-axis title'),
+      '#default_value' => $this->options['yAxis']['title'],
     );
-  }
-
-  /**
-   * Adds sorting to the individual fields.
-   */
-  public function build_sort() {
-    foreach ($this->options['fields'] as $field => $option) {
-      $handler = $this->display->handler->handlers['field'][$field];
-
-      if ($option['sort'] && $handler->click_sortable()) {
-        $handler->click_sort($option['sort']);
-      }
-    }
-
-    return FALSE;
   }
 
 }

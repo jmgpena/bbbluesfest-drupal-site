@@ -18,6 +18,9 @@ class GoogleVisualizationAPIHandler implements VisualizationHandlerInterface {
       'title' => $options['title'],
       'width' => !empty($options['width']) ? $options['width'] : '100%',
       'height' => !empty($options['height']) ? $options['height'] : '100%',
+      'vAxis' => array(
+        'title' => !empty($options['yAxis']['title']) ? $options['yAxis']['title'] : '',
+      ),
     );
 
     switch ($options['type']) {
@@ -49,12 +52,12 @@ class GoogleVisualizationAPIHandler implements VisualizationHandlerInterface {
       $table_row = array();
 
       if (!empty($options['xAxis']['labelField'])) {
-        $table_row[] = check_plain(strip_tags((string) $row[$options['xAxis']['labelField']]));
+        $table_row[] = html_entity_decode(((string) $row[$options['xAxis']['labelField']]), ENT_QUOTES);
       }
 
       foreach ($options['fields'] as $name => $column) {
         if (!empty($column['enabled'])) {
-          $value = (int) $row[$name];
+          $value = is_null($row[$name]) ? NULL : (float) $row[$name];
 
           $table_row[] = $value;
         }

@@ -17,7 +17,6 @@ function visualization_views_plugins() {
         'uses options' => TRUE,
         'uses row plugin' => TRUE,
         'uses grouping' => FALSE,
-        'even empty' => TRUE,
         'type' => 'normal',
         'theme' => 'visualization',
         'theme path' => drupal_get_path('module', 'visualization') . '/theme',

@@ -65,7 +65,7 @@ Drupal.behaviors.visualization_gva = {
           }
         }
 
-        google.setOnLoadCallback(drawChart);
+        $(document).ready(drawChart);
       }
     });
   },

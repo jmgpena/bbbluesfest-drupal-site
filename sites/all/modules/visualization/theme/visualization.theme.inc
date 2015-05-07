@@ -20,11 +20,6 @@ function template_preprocess_visualization(&$vars) {
       $options['fields'][$name]['label'] = $field->options['label'];
     }
 
-    // Title.
-    if (empty($options['title'])) {
-      $options['title'] = $view->human_name;
-    }
-
     // Data.
     $data = $view->style_plugin->rendered_fields;
   }

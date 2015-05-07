@@ -42,7 +42,7 @@ class HighchartsHandler implements VisualizationHandlerInterface {
     $x_axis = array();
     if (!empty($options['xAxis']['labelField'])) {
       foreach ($data as $row) {
-        $x_axis[] = check_plain(strip_tags((string) $row[$options['xAxis']['labelField']]));
+        $x_axis[] = html_entity_decode((string) $row[$options['xAxis']['labelField']], ENT_QUOTES);
       }
     }
 
@@ -73,7 +73,7 @@ class HighchartsHandler implements VisualizationHandlerInterface {
           $value = (int) $row[$name];
 
           if (!empty($column['enabled'])) {
-            $serie->data[] = (object) array('name' => check_plain(strip_tags($row[$options['xAxis']['labelField']])), 'y' => $value);
+            $serie->data[] = (object) array('name' => (string) html_entity_decode($row[$options['xAxis']['labelField']], ENT_QUOTES), 'y' => $value);
           }
           else {
             $serie->data[] = $value;
@@ -140,7 +140,7 @@ class HighchartsHandler implements VisualizationHandlerInterface {
    * Returns an array with supported chart types.
    */
   public function supportedTypes() {
-    return array('line', 'column', 'pie');
+    return array('bar', 'line', 'column', 'pie');
   }
 
 }
