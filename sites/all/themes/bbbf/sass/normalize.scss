@@ -119,6 +119,14 @@ audio:not([controls]) {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MailartRubberstamp';
+  src: url('fonts/mailart-rubberstamp-webfont.woff') format('woff'),
+  url('fonts/mailart-rubberstamp-webfont.ttf') format('truetype');
+  font-weigth: normal;
+  font-style: normal;
+}
+
 /*
  * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
  *    http://clagnut.com/blog/348/#c790

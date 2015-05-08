@@ -44,7 +44,7 @@ body {
   height: 20px;
   background-color: black;
   color: white;
-  font-family: "CubanoRegular", sans-serif;
+  font-family: "MailartRubberstamp", sans-serif;
 }
 /* line 56, ../sass/pages.scss */
 #topbar .region-topbar {
@@ -173,7 +173,7 @@ body {
 /* line 159, ../sass/pages.scss */
 #slideshow .views-field-title {
   position: absolute;
-  font: 39px/44px "CubanoRegular", sans-serif;
+  font: 39px/44px "MailartRubberstamp", sans-serif;
   left: 12.5%;
   bottom: 100px;
   text-shadow: #444 0 2px 2px;
@@ -189,7 +189,7 @@ body {
 /* line 175, ../sass/pages.scss */
 #slideshow .field-name-field-datalocal {
   position: absolute;
-  font: 24px/28px "CubanoRegular", sans-serif;
+  font: 24px/28px "MailartRubberstamp", sans-serif;
   left: 12.5%;
   bottom: 70px;
   text-shadow: #444 0 2px 2px;
@@ -198,7 +198,7 @@ body {
 /* line 185, ../sass/pages.scss */
 #slideshow .field-name-field-local {
   position: absolute;
-  font: 18px/22px "CubanoRegular", sans-serif;
+  font: 18px/22px "MailartRubberstamp", sans-serif;
   left: 12.5%;
   bottom: 45px;
   text-shadow: #444 0 2px 2px;
@@ -208,7 +208,7 @@ body {
 /* line 196, ../sass/pages.scss */
 #slideshow .field-name-field-entrada {
   position: absolute;
-  font: 18px/22px "CubanoRegular", sans-serif;
+  font: 18px/22px "MailartRubberstamp", sans-serif;
   left: 12.5%;
   bottom: 25px;
   text-shadow: #444 0 2px 2px;
@@ -276,7 +276,7 @@ body {
 }
 /* line 265, ../sass/pages.scss */
 #triptic .block h2 {
-  font: 36px/38px "CubanoRegular", sans-serif;
+  font: 36px/38px "MailartRubberstamp", sans-serif;
 }
 /* line 268, ../sass/pages.scss */
 #triptic .media-player {
@@ -329,7 +329,7 @@ body {
 /* line 311, ../sass/pages.scss */
 #content #page-title {
   display: none;
-  font: 36px/38px "CubanoRegular", sans-serif;
+  font: 36px/38px "MailartRubberstamp", sans-serif;
   border-bottom: 2px double gray;
 }
 /* line 318, ../sass/pages.scss */
@@ -364,7 +364,7 @@ body {
 /* line 341, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li .field-name-title h2 {
   margin: 0 0 20px 0;
-  font: 24px/30px "CubanoRegular", sans-serif;
+  font: 24px/30px "MailartRubberstamp", sans-serif;
 }
 /* line 347, ../sass/pages.scss */
 #content .view-id-novidades .item-list ul li .field-name-node-link a {
@@ -560,7 +560,7 @@ span.field-label {
 }
 /* line 503, ../sass/pages.scss */
 #footer .block h2 {
-  font: 32px/34px "CubanoRegular", sans-serif;
+  font: 32px/34px "MailartRubberstamp", sans-serif;
 }
 /* line 506, ../sass/pages.scss */
 #footer .block p, #footer .block .form-item {
@@ -635,12 +635,12 @@ span.field-label {
 }
 /* line 558, ../sass/pages.scss */
 .node-6 .bigday .daynumber, .node-45 .bigday .daynumber, .node-46 .bigday .daynumber, .node-53 .bigday .daynumber, .node-54 .bigday .daynumber {
-  font: 49px/54px "CubanoRegular", sans-serif;
+  font: 49px/54px "MailartRubberstamp", sans-serif;
   color: white;
 }
 /* line 566, ../sass/pages.scss */
 .node-6 .day .daynumber, .node-45 .day .daynumber, .node-46 .day .daynumber, .node-53 .day .daynumber, .node-54 .day .daynumber {
-  font: 39px/39px "CubanoRegular", sans-serif;
+  font: 39px/39px "MailartRubberstamp", sans-serif;
   color: white;
   float: left;
   margin: 0 10px 20px 0;
@@ -655,20 +655,20 @@ span.field-label {
 }
 /* line 578, ../sass/pages.scss */
 .node-6 .bigband, .node-45 .bigband, .node-46 .bigband, .node-53 .bigband, .node-54 .bigband {
-  font: 34px/36px "CubanoRegular", sans-serif;
+  font: 34px/36px "MailartRubberstamp", sans-serif;
   margin: 10px 0 0 0;
 }
 /* line 583, ../sass/pages.scss */
 .node-6 .band, .node-45 .band, .node-46 .band, .node-53 .band, .node-54 .band {
-  font: 24px/28px "CubanoRegular", sans-serif;
+  font: 24px/28px "MailartRubberstamp", sans-serif;
 }
 /* line 587, ../sass/pages.scss */
 .node-6 .label, .node-45 .label, .node-46 .label, .node-53 .label, .node-54 .label {
-  font: 13px/16px "CubanoRegular", sans-serif;
+  font: 13px/16px "MailartRubberstamp", sans-serif;
 }
 /* line 591, ../sass/pages.scss */
 .node-6 .feat, .node-45 .feat, .node-46 .feat, .node-53 .feat, .node-54 .feat {
-  font: 16px/18px "CubanoRegular", sans-serif;
+  font: 16px/18px "MailartRubberstamp", sans-serif;
 }
 /* line 595, ../sass/pages.scss */
 .node-6 a, .node-45 a, .node-46 a, .node-53 a, .node-54 a {
@@ -684,7 +684,7 @@ div.box {
   background-color: #92b4bf;
   padding: 15px 15px;
   margin: 15px 15px 15px 0;
-  font: 22px/24px "CubanoRegular", sans-serif;
+  font: 22px/24px "MailartRubberstamp", sans-serif;
   color: white;
 }
 /* line 610, ../sass/pages.scss */

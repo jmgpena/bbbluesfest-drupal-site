@@ -70,19 +70,19 @@
 }
 /* line 59, ../sass/views-styles.scss */
 .view-bilheteira .views-row .views-field-title {
-  font: 19px/22px "CubanoRegular", sans-serif;
+  font: 19px/22px "MailartRubberstamp", sans-serif;
 }
 /* line 62, ../sass/views-styles.scss */
 .view-bilheteira .views-row .field-name-commerce-price {
   margin: 5px 0 0 0;
-  font: 18px/22px "CubanoRegular", sans-serif;
+  font: 18px/22px "MailartRubberstamp", sans-serif;
   font-weight: bold;
   text-align: center;
 }
 /* line 69, ../sass/views-styles.scss */
 .view-bilheteira .views-row ul.field-name-field-eventos {
   color: white;
-  font: 16px/18px "CubanoRegular", sans-serif;
+  font: 16px/18px "MailartRubberstamp", sans-serif;
   list-style-type: none;
   padding: 0;
   margin: 10px 0;
@@ -164,7 +164,7 @@ form#commerce-checkout-form-checkout fieldset {
 form#commerce-checkout-form-checkout fieldset legend {
   position: relative;
   top: 15px;
-  font: 16px/18px "CubanoRegular", sans-serif;
+  font: 16px/18px "MailartRubberstamp", sans-serif;
 }
 /* line 150, ../sass/views-styles.scss */
 form#commerce-checkout-form-checkout table.views-table {
@@ -211,7 +211,7 @@ form#commerce-checkout-form-review fieldset {
 form#commerce-checkout-form-review fieldset legend {
   position: relative;
   top: 15px;
-  font: 16px/18px "CubanoRegular", sans-serif;
+  font: 16px/18px "MailartRubberstamp", sans-serif;
   margin: 0 0 15px 0;
 }
 /* line 196, ../sass/views-styles.scss */

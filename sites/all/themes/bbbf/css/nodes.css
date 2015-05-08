@@ -116,7 +116,7 @@
 
 /* line 82, ../sass/nodes.scss */
 .node-banda.node-teaser .field-name-title h2 {
-  font: 24px/28px "CubanoRegular", sans-serif;
+  font: 24px/28px "MailartRubberstamp", sans-serif;
   margin: 0;
 }
 /* line 87, ../sass/nodes.scss */
@@ -131,7 +131,7 @@
 
 /* line 99, ../sass/nodes.scss */
 .node-galeria.node-teaser .field-name-title h2 {
-  font: 24px/28px "CubanoRegular", sans-serif;
+  font: 24px/28px "MailartRubberstamp", sans-serif;
   margin: 0;
 }
 /* line 104, ../sass/nodes.scss */
@@ -146,7 +146,7 @@
 }
 /* line 113, ../sass/nodes.scss */
 .node-article.node-teaser .field-name-title h2 {
-  font: 24px/28px "CubanoRegular", sans-serif;
+  font: 24px/28px "MailartRubberstamp", sans-serif;
   margin: 0;
 }
 /* line 118, ../sass/nodes.scss */
@@ -190,23 +190,23 @@
 }
 /* line 157, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-title h2 {
-  font: 26px/30px "CubanoRegular", sans-serif;
+  font: 26px/30px "MailartRubberstamp", sans-serif;
   margin: 0 0 20px 0;
 }
 /* line 163, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-datalocal {
-  font: 20px/24px "CubanoRegular", sans-serif;
+  font: 20px/24px "MailartRubberstamp", sans-serif;
   margin: 0 0 10px 0;
 }
 /* line 168, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-local {
-  font: 16px/18px "CubanoRegular", sans-serif;
+  font: 16px/18px "MailartRubberstamp", sans-serif;
   margin: 0 0 10px 0;
 }
 /* line 173, ../sass/nodes.scss */
 .node-banda.view-mode-full .field-name-field-entrada {
   color: #39b549;
-  font: 16px/18px "CubanoRegular", sans-serif;
+  font: 16px/18px "MailartRubberstamp", sans-serif;
   margin: 0 0 10px 0;
 }
 /* line 181, ../sass/nodes.scss */
