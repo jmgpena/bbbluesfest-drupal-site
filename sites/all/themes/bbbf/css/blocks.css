@@ -121,7 +121,7 @@
 #block-system-main-menu ul.menu {
   padding: 0;
   margin: 45px 0 0 0;
-  font: 36px/42px "MailartRubberstamp", sans-serif;
+  font: 24px/28px "MailartRubberstamp", sans-serif;
 }
 /* line 86, ../sass/blocks.scss */
 #block-system-main-menu ul.menu li {
